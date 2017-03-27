@@ -36,4 +36,10 @@ function Profile(name, location, sportTR, sportLead, bouldering, skill, contact)
   this.contact = contact;
   this.points = 0;
   profilesArr.push(this);
+};
+
+if (lAndrews.skill += mLindell.skill) {
+  console.log('you have a match!');
+} else {
+  console.log('no good');
 }
