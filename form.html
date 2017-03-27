@@ -5,8 +5,22 @@
     <title></title>
   </head>
   <body>
+    <header>
+      <div class="topnav">
+        <img src="assets/images/mtLogo_cropped.jpg" alt="Just Climb ridgeline logo" id="navLogo"/><span>Just Climb</span>
+        <ul>
+          <li><a href="index.html">Home</a></li> <!--The home page will include AboutMe information on Team Just Climb.-->
+          <li><a href="form.html">Match Me</a></li><!--Link to form to match climbers-->
+          <li><a href="profile.html">Just Climbers</a></li><!--Link to complete list of climbers and their respective stats-->
+        </ul>
+      </div>
+      <div id="climbLogo">
+        <img src="assets/images/climbLogo_cropped.jpg" alt="Just Climb climbing logo" id="climbLogo"/>
+      </div>
+    </header>
     <section id="userInputField">
-    <form method="post">
+    <form method="get">
+      <fieldset>
       <div id="nameDiv">
         <label for="name">Name:</label>
         <input type="text" id="name" name="user_name">
@@ -21,9 +35,9 @@
         <option value="Seattle Bouldering Project">Seattle Bouldering Project</option>
       </select>
       </div>
-      <div>
+      <div id="gradeDiv">
         <label for="grade">Grade:</label>
-        <select name="Location">
+        <select name="Grade">
         <option value="5.5 - 5.7 / V0">5.5 - 5.7 / V0</option>
         <option value="5.8 - 5.9 / V1">5.8 - 5.9 / V1</option>
         <option value="5.10a - 5.10b / V2">5.10a - 5.10b / V2</option>
@@ -34,7 +48,17 @@
         <option value="5.13a - 5.13b / V8">5.13a - 5.13b / V8</option>
         <option value="5.13c - 5.13d / V9">5.13c - 5.13d / V9</option>
       </div>
-      <div></div>
+      <div id="typeDiv">
+          <legend>Type</legend>
+          <input type="radio" id="Sport Top Rope">
+          <label for="Sport Top Rope">Sport Top Rope</label>
+          <input type="radio" id="Sport Lead">
+          <label for="Sport Lead">Sport Lead</label>
+          <input type="radio" id="Boulder">
+          <label for="Boulder">Boulder</label>
+      </div>
+      <input type="submit">
+    </fieldset>
     </form>
   </section>
   </body>

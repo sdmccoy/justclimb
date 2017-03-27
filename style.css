@@ -20,6 +20,7 @@ span {
   text-align: center;
   font-family: helvetica, sans-serif;
   font-size: 3rem;
+  margin-left: 10px;
 }
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -34,6 +35,12 @@ span {
 #navLogo {
   padding: 2px;
 }
+#climbLogo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
 ul  {
   clear: both;
   list-style-type: none;
@@ -44,6 +51,7 @@ li  {
 }
 body {
   display: block;
+  font-family: helvetica, sans-serif;
 
 }
 #logo {
