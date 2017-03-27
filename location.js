@@ -2,15 +2,14 @@
 
 // working on gymlocation match formula
 
-var gymLocationArray = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
-
 function matchGymLocation(){
   for (var i = 0; i < profilesArr.length; i++) {
-    var isMatch = elGymLocation.match(profilesArr[i].location);
-    if (isMatch) {
-      profilesArr[i].push(this.points + 6);
+    var newLocation = 'Seattle Bouldering Project';
+    var matching = profilesArr[i].location.includes(newLocation);
+    if (matching) {
+      profilesArr[i].points += 6;
     } else {
-      profilesArr[i].push(this.points + 0);
+      profilesArr[i].points += 0;
     }
   }
 };
@@ -18,18 +17,16 @@ function matchGymLocation(){
 var elGymLocation = document.getElementById('gym-location');
 elGymLocation.addEventListener('submit', matchGymLocation);
 
-//console testing without event
-
-var gymLocationArray = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
+//console testing without event. This works in the for loop. Add the event up top to test.
 
 function matchGymLocation(){
   for (var i = 0; i < profilesArr.length; i++) {
     var newLocation = 'Seattle Bouldering Project';
     var matching = profilesArr[i].location.includes(newLocation);
     if (matching) {
-      profilesArr[i].points + 6;
+      profilesArr[i].points += 6;
     } else {
-      profilesArr[i].points + 0;
+      profilesArr[i].points += 0;
     }
   }
 };
