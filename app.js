@@ -5,6 +5,7 @@ var typeArr = ['Sport TR', 'Sport Lead', 'Bouldering'];
 var locationArr = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
 var profilesArr = [];
 
+
 var aJohnson = new Profile('Andrew Johnson', 'Vertical World Seattle', true, false, false, '5.5 - 5.7 / V0', 'andrew@johnson.com');
 var aMcguine = new Profile('Andrew McGuine', 'Vertical World Redmond', false, true, false, '5.10a - 5.10b / V2', 'andrew@mcguine.com');
 var aSparks = new Profile('Anthony Sparks', 'Stone Gardens Seattle', false, true, false, '5.10c - 5.10d / V3', 'anthony@sparks.com');
@@ -52,4 +53,30 @@ function matchSkill() {
       console.log('no good');
     }
   }
+
+//takes the form input and creates a new profile and pushes in to the empty profilesArr
+function newProfileFormSubmit(event) {
+  event.preventDefault();
+  var newName = event.name.value;
+  var newLocation = event.location.value;
+  var newSportTR = event.sportTR.value;
+  var newSportLead = event.sportLead.value;
+  var newBouldering = event.bouldering.value;
+  var newSkill = event.skill.value;
+  var newcontact = event.contact.value;
+  this.points = 0; //I dont think this is needed
+  profilesArr.push(this);
+  newProfileToLocalStorage();
+};
+
+// identifies the user hit submit, then runs the newProfileFormSubmit function
+var createNewProfile = document.getElementById('form');
+createNewProfile.addEventListener('submit', newProfileFormSubmit); {
+  
+}
+
+//function to put the users form input into local storage
+function newProfileToLocalStorage(){
+  localStorage.JSON.stringify(profilesArr);
+
 };
