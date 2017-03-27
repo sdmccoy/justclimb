@@ -1,4 +1,4 @@
-firstName, lastName, profilePhoto
+lastName, firstName, profilePhoto
 Johnson, Andrew, Andrew_Johnson.jpg
 McGuiness, Andrew, Andrew_McGuiness.jpg
 Sparks, Anthony, Anthony_Sparks.jpg
