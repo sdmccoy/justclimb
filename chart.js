@@ -9,20 +9,22 @@ function drawChart() {
   //Create table data.
   var data = google.visualization.arrayToDataTable([
     ['Climber', 'link', 'Match Percentage'],
-    ['Climber 1', 'http://www.thefreedictionary.com/work', 11],
-    ['Climber 2', 'http://www.thefreedictionary.com/eat', 2],
-    ['Climber 3', 'http://www.thefreedictionary.com/commute', 2],
-    ['Climber 4', 'http://www.thefreedictionary.com/television',2],
-    ['Climber 5', 'http://www.thefreedictionary.com/sleep', 7]
+    ['Climber 1', 'profile.html', 10],
+    ['Climber 2', 'profile.html', 3],
+    ['Climber 3', 'profile.html', 4],
+    ['Climber 4', 'profile.html', 2],
+    ['Climber 5', 'profile.html', 5]
   ]);
 
   var view = new google.visualization.DataView(data);
+// View columns 0 and 2, the links column is hidden.
   view.setColumns([0, 2]);
 // Sets chart view options.
   var options = {
     title: 'Climber Matches',
     width: 400,
-    height: 300
+    height: 300,
+    colors: ['#22BF01', '#177F00', '#2EFF01', '#0B4000', '#29E501']
   };
   //Instantiate and draw our chart.
   var chart = new google.visualization.PieChart(
