@@ -57,6 +57,7 @@ function newProfileFormSubmit(event) {
 // identifies the user hit submit, then runs the newProfileFormSubmit function
 var createNewProfile = document.getElementById('form');
 createNewProfile.addEventListener('submit', newProfileFormSubmit); {
+  
 }
 
 //function to put the users form input into local storage
