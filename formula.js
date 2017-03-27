@@ -17,3 +17,8 @@ function matchGymLocation(){
 
 var elGymLocation = document.getElementById('gym-location');
 elGymLocation.addEventListener('submit', matchGymLocation);
+
+//one function to push new user data to local storage.
+function newProfileLocalStorage(){
+  localStorage.push(elGymLocation);
+};
