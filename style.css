@@ -13,6 +13,7 @@
   text-decoration: none;
   font-size: 17px;
   max-width: 100%;
+
 }
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -26,5 +27,21 @@
 }
 body {
   display: block;
+
+}
+#logo {
+    display: block;
+    float: left;
+
+}
+header {
+
+}
+
+body {
+
+}
+
+#form {
 
 }
