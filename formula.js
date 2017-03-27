@@ -20,9 +20,24 @@ elGymLocation.addEventListener('submit', matchGymLocation);
 
 //one function to push new user data to local storage.
 function newProfileLocalStorage(){
+
+  localStorage.JSON.stringify(elName);
   localStorage.JSON.stringify(elGymLocation);
-  localStorage.JSON.stringify(elGymLocation);
-  localStorage.JSON.stringify(elGymLocation);
-  localStorage.JSON.stringify(elGymLocation);
-  localStorage.JSON.stringify(elGymLocation);
+  localStorage.JSON.stringify(elSportTR);
+  localStorage.JSON.stringify(elSportLead);
+  localStorage.JSON.stringify(elBouldering);
+  localStorage.JSON.stringify(elSkill);
+  localStorage.JSON.stringify(elContact);
 };
+
+function Profile(name, location, sportTR, sportLead, bouldering, skill, contact) {
+  this.name = name;
+  this.location = location;
+  this.sportTR = sportTR;
+  this.sportLead = sportLead;
+  this.bouldering = bouldering;
+  this.skill = skill;
+  this.contact = contact;
+  this.points = 0;
+  profilesArr.push(this);
+}

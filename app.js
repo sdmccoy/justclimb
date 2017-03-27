@@ -37,3 +37,6 @@ function Profile(name, location, sportTR, sportLead, bouldering, skill, contact)
   this.points = 0;
   profilesArr.push(this);
 }
+
+var createNewUser = document.getElementById('form');
+createNewUser.addEventListener('submit', Profile);
