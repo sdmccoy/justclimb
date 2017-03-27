@@ -38,8 +38,18 @@ function Profile(name, location, sportTR, sportLead, bouldering, skill, contact)
   profilesArr.push(this);
 };
 
-if (lAndrews.skill += mLindell.skill) {
-  console.log('you have a match!');
-} else {
-  console.log('no good');
-}
+function matchSkill() {
+  for(i = 0; i < profilesArr.length; i++) {
+    if (lAndrews.skill === [i]) {
+      console.log('you have a match!');
+    // } else if (lAndrews.skill -= [i]){
+    //   console.log('you have a match');
+    // }
+    // else if (lAndrews.skill += [i]) {
+    //   console.log('you have a match$');
+    // }
+    } else {
+      console.log('no good');
+    }
+  }
+};
