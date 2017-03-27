@@ -5,7 +5,6 @@ var typeArr = ['Sport TR', 'Sport Lead', 'Bouldering'];
 var locationArr = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
 var profilesArr = [];
 
-
 var aJohnson = new Profile('Andrew Johnson', 'Vertical World Seattle', true, false, false, '5.5 - 5.7 / V0', 'andrew@johnson.com');
 var aMcguine = new Profile('Andrew McGuine', 'Vertical World Redmond', false, true, false, '5.10a - 5.10b / V2', 'andrew@mcguine.com');
 var aSparks = new Profile('Anthony Sparks', 'Stone Gardens Seattle', false, true, false, '5.10c - 5.10d / V3', 'anthony@sparks.com');
@@ -26,6 +25,11 @@ var nJohson = new Profile('Neil Johnson', 'Stone Gardens Bellevue', true, false,
 var rGarafalo = new Profile('Reid Garafalo', 'Vertical World Seattle', true, true, false, '5.12c - 5.12d / V7', 'reid@garafalo.com');
 var tLundell = new Profile('Teddy Lundell', 'Stone Gardens Seattle', true, false, true, '5.8 - 5.9 / V1', 'teddy@lundell.com');
 var tJanko = new Profile('Tony Janko', 'Vertical World Redmond', true, true, true, '5.11c - 5.11d / V5', 'tony@janko.com');
+
+var name = document.getElementById('name');
+var location = document.getElementById('location');
+var grade = document.getElementById('grade');
+var contact = document.getElementById('contact');
 
 function Profile(name, location, sportTR, sportLead, bouldering, skill, contact) {
   this.name = name;
@@ -53,6 +57,7 @@ function matchSkill() {
       console.log('no good');
     }
   }
+}
 
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
 function newProfileFormSubmit(event) {
@@ -72,7 +77,7 @@ function newProfileFormSubmit(event) {
 // identifies the user hit submit, then runs the newProfileFormSubmit function
 var createNewProfile = document.getElementById('form');
 createNewProfile.addEventListener('submit', newProfileFormSubmit); {
-  
+
 }
 
 //function to put the users form input into local storage
@@ -80,3 +85,7 @@ function newProfileToLocalStorage(){
   localStorage.JSON.stringify(profilesArr);
 
 };
+
+function profileData(){
+
+}
