@@ -43,13 +43,13 @@ function matchSkill() {
   for(i = 0; i < profilesArr.length; i++) {
     if (lAndrews.skill === [i]) {
       console.log('you have a match!');
-    // } else if (lAndrews.skill -= [i]){
-    //   console.log('you have a match');
-    // }
-    // else if (lAndrews.skill += [i]) {
-    //   console.log('you have a match$');
-    // }
-    } else {
+    } else if (lAndrews.skill -= [i]){
+      console.log('you have a match');
+    }
+    else if (lAndrews.skill += [i]) {
+      console.log('you have a match$');
+    }
+    else {
       console.log('no good');
     }
   }
