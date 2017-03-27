@@ -22,9 +22,10 @@ function drawChart() {
 // Sets chart view options.
   var options = {
     title: 'Climber Matches',
-    width: 400,
-    height: 300,
-    colors: ['#22BF01', '#177F00', '#2EFF01', '#0B4000', '#29E501']
+    width: 600,
+    height: 500,
+    is3D: true,
+    colors: ['#DB2D0A', '#CF2A09', '#B52508', '#8F1D06', '#4F1003']
   };
   //Instantiate and draw our chart.
   var chart = new google.visualization.PieChart(
