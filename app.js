@@ -1,5 +1,6 @@
 'use strict';
-
+// debugger;
+console.log('Test string');
 var gradeArr = ['5.5 - 5.7 / V0', '5.8 - 5.9 / V1', '5.10a - 5.10b / V2', '5.10c - 5.10d / V3', '5.11a - 5.11b / V4', '5.11c - 5.11d / V5', '5.12a - 5.12b / V6', '5.12c - 5.12d / V7', '5.13a - 5.13b / V8', '5.13c - 5.13d / V9'];
 var typeArr = ['Sport TR', 'Sport Lead', 'Bouldering'];
 var locationArr = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
@@ -28,7 +29,7 @@ var tJanko = new Profile('Tony Janko', 'Vertical World Redmond', true, true, tru
 
 var resetPoints = getElementById('reset-Points');
 var name = document.getElementById('name');
-var location = document.getElementById('location');
+var gymLocation = document.getElementById('gymLocation');
 var grade = document.getElementById('grade');
 var contact = document.getElementById('contact');
 
@@ -45,32 +46,31 @@ function Profile(name, location, sportTR, sportLead, bouldering, skill, contact)
 };
 
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
-function newProfileFormSubmit(event) {
+function createNewProfile(event) {
   event.preventDefault();
-  var newName = event.name.value;
-  var newLocation = event.location.value;
-  var newSportTR = event.sportTR.value;
-  var newSportLead = event.sportLead.value;
-  var newBouldering = event.bouldering.value;
-  var newSkill = event.skill.value;
-  var newcontact = event.contact.value;
-  this.points = 0; //I dont think this is needed
+  console.log('event test');
+  var newName = newProfile.elements.username;
+  var newLocation = newProfile.elements.gymlocation;
+  var newSportTR = newProfile.elements.sporttr;
+  var newSportLead = newProfile.elements.sportlead;
+  var newBouldering = newProfile.elements.bouldering;
+  var newSkill = newProfile.elements.grade;
+  var newcontact = newProfile.elements.contact;
+  this.points = 0;
   profilesArr.push(this);
-  newProfileToLocalStorage();
+  // newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
-var createNewProfile = document.getElementById('form');
-createNewProfile.addEventListener('submit', newProfileFormSubmit); {
-
-}
+var newProfile = document.getElementById('profile-form');
+newProfile.addEventListener('submit', createNewProfile);
 
 //function to put the users form input into local storage
-function newProfileToLocalStorage(){
-  localStorage.JSON.stringify(profilesArr);
+// function newProfileToLocalStorage(){
+//   localStorage.JSON.stringify(profilesArr);
+//
+// };
 
-};
-
-function profileData(){
-
-}
+// function profileData(){
+//
+// }

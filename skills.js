@@ -1,5 +1,6 @@
+'use strict';
 //Working function. Need to add event handlers
-function matchSkillTEST() {
+function matchSkill() {
   for (var i = 0; i < gradeArr.length; i++) {
     var newSkill = '5.8 - 5.9 / V1';
     var findGradeInArr = gradeArr[i].includes(newSkill);
@@ -16,7 +17,7 @@ function matchSkillTEST() {
         var matchrightGradeToObjects = profilesArr[i].skill.includes(rightGrade);
         // console.log();
         if (matchmiddleGradeToObjects || matchleftGradeToObjects || matchrightGradeToObjects) {
-          profilesArr[i].points += 2;
+          profilesArr[i].points += 3;
           console.log(aJohnson.points);
         }
       }
