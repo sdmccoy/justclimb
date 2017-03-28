@@ -1,6 +1,5 @@
 'use strict';
 // debugger;
-console.log('Test string');
 var gradeArr = ['5.5 - 5.7 / V0', '5.8 - 5.9 / V1', '5.10a - 5.10b / V2', '5.10c - 5.10d / V3', '5.11a - 5.11b / V4', '5.11c - 5.11d / V5', '5.12a - 5.12b / V6', '5.12c - 5.12d / V7', '5.13a - 5.13b / V8', '5.13c - 5.13d / V9'];
 var typeArr = ['Sport TR', 'Sport Lead', 'Bouldering'];
 var locationArr = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
@@ -27,15 +26,15 @@ var rGarafalo = new Profile('Reid Garafalo', 'Vertical World Seattle', true, tru
 var tLundell = new Profile('Teddy Lundell', 'Stone Gardens Seattle', true, false, true, '5.8 - 5.9 / V1', 'teddy@lundell.com');
 var tJanko = new Profile('Tony Janko', 'Vertical World Redmond', true, true, true, '5.11c - 5.11d / V5', 'tony@janko.com');
 
-var resetPoints = getElementById('reset-Points');
+var resetPoints = document.getElementById('reset-points');
 var name = document.getElementById('name');
 var gymLocation = document.getElementById('gymLocation');
 var grade = document.getElementById('grade');
 var contact = document.getElementById('contact');
 
-function Profile(name, location, sportTR, sportLead, bouldering, skill, contact) {
+function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, contact) {
   this.name = name;
-  this.location = location;
+  this.gymLocation = gymLocation;
   this.sportTR = sportTR;
   this.sportLead = sportLead;
   this.bouldering = bouldering;
@@ -49,15 +48,24 @@ function Profile(name, location, sportTR, sportLead, bouldering, skill, contact)
 function createNewProfile(event) {
   event.preventDefault();
   console.log('event test');
-  var newName = newProfile.elements.username;
-  var newLocation = newProfile.elements.gymlocation;
-  var newSportTR = newProfile.elements.sporttr;
-  var newSportLead = newProfile.elements.sportlead;
-  var newBouldering = newProfile.elements.bouldering;
-  var newSkill = newProfile.elements.grade;
-  var newcontact = newProfile.elements.contact;
+  var newName = newProfile.elements.username.value;
+  console.log(newName);
+  var newLocation = newProfile.elements.gymlocation.value;
+  console.log(newLocation);
+  var newSportTR = newProfile.elements.sporttr.value;
+  console.log(newSportTR);
+  var newSportLead = newProfile.elements.sportlead.value;
+  console.log(newSportLead);
+  var newBouldering = newProfile.elements.bouldering.value;
+  console.log(newBouldering);
+  var newSkill = newProfile.elements.grade.value;
+  console.log(newSkill);
+  // var newContact = newProfile.elements.contact.value;
   this.points = 0;
-  profilesArr.push(this);
+  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+  // console.log(this);
+  // profilesArr.push(this);
+  console.log(profilesArr);
   // newProfileToLocalStorage();
 };
 
