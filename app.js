@@ -26,6 +26,7 @@ var rGarafalo = new Profile('Reid Garafalo', 'Vertical World Seattle', true, tru
 var tLundell = new Profile('Teddy Lundell', 'Stone Gardens Seattle', true, false, true, '5.8 - 5.9 / V1', 'teddy@lundell.com');
 var tJanko = new Profile('Tony Janko', 'Vertical World Redmond', true, true, true, '5.11c - 5.11d / V5', 'tony@janko.com');
 
+var resetPoints = getElementById('reset-Points');
 var name = document.getElementById('name');
 var location = document.getElementById('location');
 var grade = document.getElementById('grade');
@@ -42,22 +43,6 @@ function Profile(name, location, sportTR, sportLead, bouldering, skill, contact)
   this.points = 0;
   profilesArr.push(this);
 };
-
-function matchSkill() {
-  for(i = 0; i < profilesArr.length; i++) {
-    if (lAndrews.skill === [i]) {
-      console.log('you have a match!');
-    } else if (lAndrews.skill -= [i]){
-      console.log('you have a match');
-    }
-    else if (lAndrews.skill += [i]) {
-      console.log('you have a match$');
-    }
-    else {
-      console.log('no good');
-    }
-  }
-}
 
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
 function newProfileFormSubmit(event) {
