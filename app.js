@@ -79,6 +79,9 @@ function newProfileFormSubmit(event) {
   // var newContact = newProfile.elements.contact.value;
   this.points = 0;
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+  matchSportTR();
+  matchSportLead();
+  matchBouldering();
   // console.log(this);
   // profilesArr.push(this);
   // console.log(profilesArr);
