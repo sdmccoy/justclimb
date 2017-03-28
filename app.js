@@ -26,6 +26,7 @@ var rGarafalo = new Profile('Reid Garafalo', 'Vertical World Seattle', true, tru
 var tLundell = new Profile('Teddy Lundell', 'Stone Gardens Seattle', true, false, true, '5.8 - 5.9 / V1', 'teddy@lundell.com');
 var tJanko = new Profile('Tony Janko', 'Vertical World Redmond', true, true, true, '5.11c - 5.11d / V5', 'tony@janko.com');
 
+var resetPoints = getElementById('reset-Points');
 var name = document.getElementById('name');
 var location = document.getElementById('location');
 var grade = document.getElementById('grade');
@@ -41,32 +42,6 @@ function Profile(name, location, sportTR, sportLead, bouldering, skill, contact)
   this.contact = contact;
   this.points = 0;
   profilesArr.push(this);
-};
-
-//Working function. Need to add event handlers
-function matchSkillTEST() {
-  for (var i = 0; i < gradeArr.length; i++) {
-    var newSkill = '5.8 - 5.9 / V1';
-    var findGradeInArr = gradeArr[i].includes(newSkill);
-    if (findGradeInArr) {
-      var middleGrade = gradeArr[i];
-      var leftGrade = gradeArr[i - 1];
-      var rightGrade = gradeArr[i + 1];
-      console.log(middleGrade);
-      console.log(leftGrade);
-      console.log(rightGrade);
-      for (var i = 0; i < profilesArr.length; i++) {
-        var matchmiddleGradeToObjects = profilesArr[i].skill.includes(middleGrade);
-        var matchleftGradeToObjects = profilesArr[i].skill.includes(leftGrade);
-        var matchrightGradeToObjects = profilesArr[i].skill.includes(rightGrade);
-        // console.log();
-        if (matchmiddleGradeToObjects || matchleftGradeToObjects || matchrightGradeToObjects) {
-          profilesArr[i].points += 2;
-          console.log(aJohnson.points);
-        }
-      }
-    }
-  }
 };
 
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
