@@ -81,15 +81,13 @@ function newProfileFormSubmit(event) {
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
   // console.log(this);
   // profilesArr.push(this);
-  console.log(profilesArr);
+  // console.log(profilesArr);
   // newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
-var createNewProfile = document.getElementById('form');
-createNewProfile.addEventListener('submit', newProfileFormSubmit); {
-
-}
+var newProfile = document.getElementById('profile-form');
+newProfile.addEventListener('submit', newProfileFormSubmit);
 
 //function to put the users form input into local storage
 function newProfileToLocalStorage(){
