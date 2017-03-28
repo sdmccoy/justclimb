@@ -86,13 +86,20 @@ function newProfileFormSubmit(event) {
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
-var createNewProfile = document.getElementById('form');
-createNewProfile.addEventListener('submit', newProfileFormSubmit); {
-
-}
+var newProfile = document.getElementById('profile-form');
+newProfile.addEventListener('submit', newProfileFormSubmit);
 
 //function to put the users form input into local storage
 function newProfileToLocalStorage(){
   localStorage.JSON.stringify(profilesArr);
 
 };
+
+// filling user data into profile page.
+// function changeName(){
+// }
+// changeName();
+// console.log(changeName());
+// var profileName = document.getElementById('profile-name');
+// profileName.innertext = 'My new text!';
+// profileName.innertext = 'newName';
