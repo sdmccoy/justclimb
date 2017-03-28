@@ -9,9 +9,14 @@ h1 {
 }
 body {
   background-repeat: no-repeat;
-  max-width: 960px;
+  max-width: 80%;
   background-position: bottom;
   background-position: right;
+  margin: auto;
+  color: #072112;
+  font-family: helvetica;
+  font-size: 1.3rem;
+  background-color: white;
 }
 .topnav {
   clear: both;
@@ -54,14 +59,6 @@ body {
   left: 8px;
   border: 2px solid 072112;
 }
-body {
-  margin: auto;
-  color: #072112;
-  font-family: helvetica;
-  font-size: 1.3rem;
-  background-color: white;
-  max-width: 960px;
-}
 p {
   margin-top: 100px;
   padding: 5%;
@@ -73,22 +70,26 @@ p {
   font-size: .7rem;
 }
 #climbLogoRight {
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  width: 10%;
   right: 0px;
-  opacity: .1;
+  opacity: .5;
+  height: 100%;
 }
 #climbLogoLeft {
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  width: 10%;
   left: 0px;
-  opacity: .1;
+  opacity: .3;
+  height: 100%;
 }
 label {
   font-weight: bold;
 }
 #user-input-form {
-  text-align: center;
+  text-align: left;
+  margin:auto;
+  width: 400px;
   margin-top: 100px;
 }
 #reset-points {
@@ -96,6 +97,10 @@ label {
   width: 200px;
   height: 75px;
   background-color: rgb(206,219,233);
+  margin: 20px;
+}
+#namefield {
+  padding: 20px;
 }
 #location-div {
   padding: 20px;
@@ -103,6 +108,22 @@ label {
 #type-div {
   padding: 20px;
 }
+#type-div {
+  font-weight: bold;
+}
+#type-div label {
+  font-weight: normal;
+}
+#type-div li {
+  list-style-type: none;
+  padding: 10px;
+}
 #grade-div {
   padding: 20px;
+}
+#submit {
+  margin: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(206,219,233);
 }
