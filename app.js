@@ -26,9 +26,15 @@ var rGarafalo = new Profile('Reid Garafalo', 'Vertical World Seattle', true, tru
 var tLundell = new Profile('Teddy Lundell', 'Stone Gardens Seattle', true, false, true, '5.8 - 5.9 / V1', 'teddy@lundell.com');
 var tJanko = new Profile('Tony Janko', 'Vertical World Redmond', true, true, true, '5.11c - 5.11d / V5', 'tony@janko.com');
 
-function Profile(name, location, sportTR, sportLead, bouldering, skill, contact) {
+var resetPoints = document.getElementById('reset-points');
+var name = document.getElementById('name');
+var gymLocation = document.getElementById('gymLocation');
+var grade = document.getElementById('grade');
+var contact = document.getElementById('contact');
+
+function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, contact) {
   this.name = name;
-  this.location = location;
+  this.gymLocation = gymLocation;
   this.sportTR = sportTR;
   this.sportLead = sportLead;
   this.bouldering = bouldering;
@@ -57,16 +63,26 @@ function matchSkill() {
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
 function newProfileFormSubmit(event) {
   event.preventDefault();
-  var newName = event.name.value;
-  var newLocation = event.location.value;
-  var newSportTR = event.sportTR.value;
-  var newSportLead = event.sportLead.value;
-  var newBouldering = event.bouldering.value;
-  var newSkill = event.skill.value;
-  var newcontact = event.contact.value;
-  this.points = 0; //I dont think this is needed
-  profilesArr.push(this);
-  newProfileToLocalStorage();
+  console.log('event test');
+  var newName = newProfile.elements.username.value;
+  console.log(newName);
+  var newLocation = newProfile.elements.gymlocation.value;
+  console.log(newLocation);
+  var newSportTR = newProfile.elements.sporttr.value;
+  console.log(newSportTR);
+  var newSportLead = newProfile.elements.sportlead.value;
+  console.log(newSportLead);
+  var newBouldering = newProfile.elements.bouldering.value;
+  console.log(newBouldering);
+  var newSkill = newProfile.elements.grade.value;
+  console.log(newSkill);
+  // var newContact = newProfile.elements.contact.value;
+  this.points = 0;
+  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+  // console.log(this);
+  // profilesArr.push(this);
+  console.log(profilesArr);
+  // newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
