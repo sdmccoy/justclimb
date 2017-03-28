@@ -91,10 +91,9 @@ newProfile.addEventListener('submit', newProfileFormSubmit);
 
 //function to put the users form input into local storage
 function newProfileToLocalStorage(){
-  localStorage.JSON.stringify(profilesArr);
-
+  localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
 };
-
+newProfileToLocalStorage();
 // filling user data into profile page.
 // function changeName(){
 // }
