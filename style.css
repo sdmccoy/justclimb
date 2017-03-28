@@ -1,7 +1,7 @@
 h1 {
   /*font-family: helvetica;*/
   font-size: 3rem;
-  color: #072112;
+  color: #160E54;
   margin-top: 15px;
   margin-bottom: 0px;
   float: right;
@@ -13,7 +13,7 @@ body {
   background-position: bottom;
   background-position: right;
   margin: auto;
-  color: #072112;
+  color: #160E54;
   font-family: helvetica;
   font-size: 1.3rem;
   background-color: white;
@@ -29,27 +29,28 @@ body {
   text-align: center;
 }
 .topnav a {
-  color: #072112;
+  color: #160E54;
   padding: .5% 9%;
   font-size: 1.5rem;
   max-width: 100%;
 }
 .topnav a:hover {
-  background-color: #ddd;
-  color: 072112;
+  background-color: white;
+  color: 160E54;
 }
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: white;
   color: #B5FFBC;
 }
 #navLogo {
   top: 8px;
   left: 8px;
-  border: 2px solid 072112;
+  border: 2px solid 160E54;
 }
 p {
   margin-top: 100px;
   padding: 5%;
+  text-align: justify;
   /*margin-left: 10%;*/
   max-width: 100%;
 }
