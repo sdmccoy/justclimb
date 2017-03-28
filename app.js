@@ -81,7 +81,7 @@ function newProfileFormSubmit(event) {
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
   // console.log(this);
   // profilesArr.push(this);
-  console.log(profilesArr);
+  // console.log(profilesArr);
   // newProfileToLocalStorage();
 };
 
