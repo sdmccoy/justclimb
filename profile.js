@@ -18,9 +18,21 @@ function populateNewUser(){
     var skillDiv = document.createElement('div');
     skillDiv.innerText = storedprofilesArr[i].skill;
     newSection.appendChild(skillDiv);
-    var typeDiv = document.createElement('div');
-    typeDiv.innerText = storedprofilesArr[i].gymLocation;
-    newSection.appendChild(typeDiv);
+    var typeoneDiv = document.createElement('div');
+    newSection.appendChild(typeoneDiv);
+    if (storedprofilesArr[i].sportTR === true){
+      typeoneDiv.innerText = 'SportTR';
+    }
+    var typetwoDiv = document.createElement('div');
+    newSection.appendChild(typetwoDiv);
+    if (storedprofilesArr[i].sportLead === true){
+      typetwoDiv.innerText = 'SportLead';
+    }
+    var typethreeDiv = document.createElement('div');
+    newSection.appendChild(typethreeDiv);
+    if (storedprofilesArr[i].bouldering === true){
+      typethreeDiv.innerText = 'Bouldering';
+    }
   }
 };
 
