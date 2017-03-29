@@ -3,7 +3,7 @@ Code Fellows 201-D20
 Project: Just climb
 
 Goal:
-Just Climb is a social meetup application for climbers to connect with other of like a mind, interests and experience with the goal of motivating individuals to climb, climb hard and climb often.
+Just Climb is a social meetup application for climbers to connect with other of a like mind, interests and experience with the goal of motivating individuals to climb, climb hard and climb often.
 
 
 Authors:
@@ -15,7 +15,7 @@ Anthony Robinson - Anthony 'Twandalon' Robinson authored the majority of the jav
 
 Mathew Martin - Mathew lent his artistic flare to the CSS on the site primarily but played a role in wire-framing and site concept early on while actively supporting team members in their tasks.
 
-Note: All members of the team contributed portions of the coding using the paired programming method. 
+Note: All members of the team contributed portions of the coding using the paired programming method.
 
 Acknowledgments:
 Contributors: Numerous Teaching Assistants lent their expertise and knowledge to this project. Included are Ben Garnaat, Allie Grampa, Hadiya Hope-Crichlow who all answered numerous queries and assisted in resolving those issues which blocked our groups progress. Further, Nick Hunt-Walker played the role of instructor and lead task master driving this project to completion. Lastly, a special thanks should be extended to Code Fellows who brought our team together and provided the tools and motivation driving us to success.
