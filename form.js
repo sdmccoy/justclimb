@@ -1,10 +1,10 @@
 'use strict';
-
+var hideForm = document.getElementById('clickSet');
+var clickReset = document.getElementById('reset-points');
+hideForm.style.visibility = 'hidden';
 function hideResetButtonFunc() { //Match me "Click to find your Match! button hide function"
-  var hideForm = document.getElementById('clickSet');
   if (hideForm.style.visibility === 'hidden') {
     hideForm.style.visibility = 'visible';
-  } else {
-    hideForm.style.visibility = 'hidden';
+    clickReset.style.visibility = 'hidden';
   }
-}
+};
