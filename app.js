@@ -98,6 +98,15 @@ function profilesArrToLocalStorage(){
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
 };
 
+//working on storing the new profile without overwriting the previous new profile.
+var storedProfilesArr = JSON.parse(localStorage.getItem('profilesArr'));
+
+if (storedProfilesArr) {
+  for (var i = 0; i < storedProfilesArr.length; i++) {
+    // storedProfilesArr.push()
+  }
+}
+var getStorageArr = localStorage.getItem('profilesArr', JSON.parse(profilesArr));
 // newProfileToLocalStorage();
 // filling user data into profile page.
 // function changeName(){
