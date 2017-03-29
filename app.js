@@ -46,22 +46,6 @@ function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, conta
   globalPoints.push(this.points);
 };
 
-function matchSkill() {
-  for(var i = 0; i < profilesArr.length; i++) {
-    if (lAndrews.skill === [i]) {
-      console.log('you have a match!');
-    } else if (lAndrews.skill -= [i]){
-      console.log('you have a match');
-    }
-    else if (lAndrews.skill += [i]) {
-      console.log('you have a match$');
-    }
-    else {
-      console.log('no good');
-    }
-  }
-}
-
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
 function newProfileFormSubmit(event) {
   event.preventDefault();
