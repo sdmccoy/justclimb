@@ -4,6 +4,7 @@ var gradeArr = ['5.5 - 5.7 / V0', '5.8 - 5.9 / V1', '5.10a - 5.10b / V2', '5.10c
 var typeArr = ['Sport TR', 'Sport Lead', 'Bouldering'];
 var locationArr = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
 var profilesArr = [];
+var globalPoints = [];
 
 var aJohnson = new Profile('Andrew Johnson', 'Vertical World Seattle', true, false, false, '5.5 - 5.7 / V0', 'andrew@johnson.com');
 var aMcguine = new Profile('Andrew McGuine', 'Vertical World Redmond', false, true, false, '5.10a - 5.10b / V2', 'andrew@mcguine.com');
@@ -42,6 +43,7 @@ function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, conta
   this.contact = contact;
   this.points = 0;
   profilesArr.push(this);
+  globalPoints.push(this.points);
 };
 
 function matchSkill() {
@@ -68,20 +70,35 @@ function newProfileFormSubmit(event) {
   console.log(newName);
   var newLocation = newProfile.elements.gymlocation.value;
   console.log(newLocation);
-  var newSportTR = newProfile.elements.sporttr.value;
+  if (newProfile.elements.sporttr.checked) {
+    var newSportTR = true;
+  } else {
+    var newSportTR = false;
+  }
+  // newProfile.elements.sporttr.value;
   console.log(newSportTR);
-  var newSportLead = newProfile.elements.sportlead.value;
+  if (newProfile.elements.sportlead.checked) {
+    var newSportLead = true;
+  } else {
+    var newSportLead = false;
+  }
   console.log(newSportLead);
-  var newBouldering = newProfile.elements.bouldering.value;
+  if (newProfile.elements.bouldering.checked) {
+    var newBouldering = true;
+  } else {
+    var newBouldering = false;
+  }
   console.log(newBouldering);
   var newSkill = newProfile.elements.grade.value;
   console.log(newSkill);
   // var newContact = newProfile.elements.contact.value;
-  this.points = 0;
-  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+  matchGymLocation();
+  matchSkill();
   matchSportTR();
   matchSportLead();
   matchBouldering();
+  this.points = 0;
+  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
   // console.log(this);
   // profilesArr.push(this);
   // console.log(profilesArr);
