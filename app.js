@@ -47,7 +47,7 @@ function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, conta
 };
 
 function matchSkill() {
-  for(i = 0; i < profilesArr.length; i++) {
+  for(var i = 0; i < profilesArr.length; i++) {
     if (lAndrews.skill === [i]) {
       console.log('you have a match!');
     } else if (lAndrews.skill -= [i]){
