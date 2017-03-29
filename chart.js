@@ -9,11 +9,11 @@ function drawChart() {
   //Create table data.
   var data = google.visualization.arrayToDataTable([
     ['Climber', 'link', 'Match Percentage'],
-    ['Climber 1', 'profile.html', 10],
-    ['Climber 2', 'profile.html', 3],
-    ['Climber 3', 'profile.html', 4],
-    ['Climber 4', 'profile.html', 2],
-    ['Climber 5', 'profile.html', 5]
+      ['Climber 1', 'profile.html', 10],
+      ['Climber 2', 'profile.html', 3],
+      ['Climber 3', 'profile.html', 4],
+      ['Climber 4', 'profile.html', 2],
+      ['Climber 5', 'profile.html', 5]
   ]);
 
   var view = new google.visualization.DataView(data);
