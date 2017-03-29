@@ -3,10 +3,10 @@ var storedprofilesArr = JSON.parse(localStorage.getItem('profilesArr'));
 var body = document.getElementsByTagName('body')[0];
 
 function populateNewUser(){
-  var newSection = document.createElement('section');
-  body.appendChild(newSection);
   for (var i = 0; i < storedprofilesArr.length; i++){
     var nameDiv = document.createElement('div');
+    var newSection = document.createElement('section');
+    body.appendChild(newSection);
     nameDiv.innerText = storedprofilesArr[i].name;
     newSection.appendChild(nameDiv);
     var contactDiv = document.createElement('div');
@@ -35,6 +35,8 @@ function populateNewUser(){
     }
   }
 };
+
+populateNewUser();
 
   //
   // var newDiv = document.createElement('div');
