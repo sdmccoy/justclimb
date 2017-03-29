@@ -27,55 +27,55 @@
 <body>
   <img id="form-image" src="https://www.climbing.com/.image/t_share/MTM1MjQzMzIyNDM1MzE2MzU1/hplowering.jpg"/>
   <section id="user-input-form">
-    <form method="post" id="profile-form">
-      <fieldset>
-        <button id="reset-points" type="submit" name="resetpoints">Click to find your match!</button>
-        <div id="namefield">
-          <label for="name">Name:</label>
-          <input type="button" id="user-name" name="username" />
-        </div>
-        <div id="location-div">
-          <label for="gym-location">Gym Location:</label>
-          <select id="gym-location" name="gymlocation">
-            <option value="Vertical World Seattle">Vertical World Seattle</option>
-            <option value="Vertical World Redmond">Vertical World Redmond</option>
-            <option value="Vertical World Seattle">Stone Gardens Seattle</option>
-            <option value="Stone Gardens Bellevue">Stone Gardens Bellevue</option>
-            <option value="Seattle Bouldering Project">Seattle Bouldering Project</option>
-          </select>
-        </div>
-        <div id="grade-div">
-          <label for="grade">Grade:</label>
-          <select id="grade" name="grade">
-            <option value="5.5 - 5.7 / V0">5.5 - 5.7 / V0</option>
-            <option value="5.8 - 5.9 / V1">5.8 - 5.9 / V1</option>
-            <option value="5.10a - 5.10b / V2">5.10a - 5.10b / V2</option>
-            <option value="5.10c - 5.10d / V3">5.10c - 5.10d / V3</option>
-            <option value="5.11a - 5.11b / V4">5.11a - 5.11b / V4</option>
-            <option value="5.12a - 5.12b / V6">5.12a - 5.12b / V6</option>
-            <option value="5.12c - 5.12d / V7">5.12c - 5.12d / V7</option>
-            <option value="5.13a - 5.13b / V8">5.13a - 5.13b / V8</option>
-            <option value="5.13c - 5.13d / V9">5.13c - 5.13d / V9</option>
-          </select>
+    <button onclick="hideResetButtonFunc()" id="reset-points" type="submit" name="resetpoints">Click to find your match!</button>
+      <div id="clickSet">
+      <form method="post" id="profile-form">
+        <fieldset id="clickSet">
+          <div id="namefield">
+            <label for="name">Name:</label>
+            <input type="button" id="user-name" name="username" />
           </div>
-          <div id="type-div">
-            <ul>Type</ul>
-            <li><input type="checkbox" value="" id="sport-tr" name="sporttr">
-            <label for="Sport Top Rope">Sport Top Rope</label></li>
-            <li><input type="checkbox" value="" id="sport-lead" name="sportlead">
-            <label for="Sport Lead">Sport Lead</label></li>
-            <li><input type="checkbox" value="" id="bouldering" name="bouldering">
-            <label for="Bouldering">Bouldering</label></li>
+          <div id="location-div">
+            <label for="gym-location">Gym Location:</label>
+            <select id="gym-location" name="gymlocation">
+              <option value="Vertical World Seattle">Vertical World Seattle</option>
+              <option value="Vertical World Redmond">Vertical World Redmond</option>
+              <option value="Vertical World Seattle">Stone Gardens Seattle</option>
+              <option value="Stone Gardens Bellevue">Stone Gardens Bellevue</option>
+              <option value="Seattle Bouldering Project">Seattle Bouldering Project</option>
+            </select>
           </div>
+          <div id="grade-div">
+            <label for="grade">Grade:</label>
+            <select id="grade" name="grade">
+              <option value="5.5 - 5.7 / V0">5.5 - 5.7 / V0</option>
+              <option value="5.8 - 5.9 / V1">5.8 - 5.9 / V1</option>
+              <option value="5.10a - 5.10b / V2">5.10a - 5.10b / V2</option>
+              <option value="5.10c - 5.10d / V3">5.10c - 5.10d / V3</option>
+              <option value="5.11a - 5.11b / V4">5.11a - 5.11b / V4</option>
+              <option value="5.12a - 5.12b / V6">5.12a - 5.12b / V6</option>
+              <option value="5.12c - 5.12d / V7">5.12c - 5.12d / V7</option>
+              <option value="5.13a - 5.13b / V8">5.13a - 5.13b / V8</option>
+              <option value="5.13c - 5.13d / V9">5.13c - 5.13d / V9</option>
+            </select>
+            </div>
+            <div id="type-div">
+              <ul>Type</ul>
+              <li><input type="checkbox" value="" id="sport-tr" name="sporttr">
+              <label for="Sport Top Rope">Sport Top Rope</label></li>
+              <li><input type="checkbox" value="" id="sport-lead" name="sportlead">
+              <label for="Sport Lead">Sport Lead</label></li>
+              <li><input type="checkbox" value="" id="bouldering" name="bouldering">
+              <label for="Bouldering">Bouldering</label></li>
+            </div>
+              <input type="submit">
+            </fieldset>
+          </form>
+        </div>
             <input type="submit" id="submit">
           </fieldset>
         </form>
       </section>
-    <footer>
-      <img src="Assets/Images/climbLogo_left.jpg" alt="Just Climb Logo" id="climbLogoLeft">
-      <p id="legal">Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
-      <img src="Assets/Images/climbLogo_right.jpg" alt="Just Climb Logo" id="climbLogoRight">
-    </footer>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="location.js"></script>
     <script type="text/javascript" src="skills.js"></script>
