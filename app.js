@@ -90,7 +90,7 @@ function newProfileFormSubmit(event) {
   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
   console.log(localStorage);
   currentProfileArr.push(creatingNewProfile);
-  window.location = 'chart.html';
+  // window.location = 'chart.html';
   // drawChart();
   // console.log(this);
   // profilesArr.push(this);
@@ -108,9 +108,10 @@ function profilesArrToLocalStorage(){
   if (JSON.parse(localStorage.getItem('profilesArr'))) {
     var accumProfileArr = JSON.parse(localStorage.getItem('profilesArr'));
     console.log(accumProfileArr);
-    console.log(currentProfileArr);
-    // accumProfileArr += currentProfileArr;
-    console.log(currentProfileArr);
+    // console.log(currentProfileArr);
+    var currentProfile = JSON.parse(localStorage.getItem('creatingNewProfile'));
+    accumProfileArr += currentProfile;
+    console.log(localStorage);
   } else {
     generateDBProfiles();
     console.log(localStorage);
