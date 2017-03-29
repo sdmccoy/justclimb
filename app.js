@@ -44,6 +44,7 @@ function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, conta
   this.points = 0;
   profilesArr.push(this);
   globalPoints.push(this.points);
+  profilesArrToLocalStorage();
 };
 
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
@@ -86,7 +87,6 @@ function newProfileFormSubmit(event) {
   // profilesArr.push(this);
   // console.log(profilesArr);
   // newProfileToLocalStorage();
-  //newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
@@ -94,10 +94,19 @@ var newProfile = document.getElementById('profile-form');
 newProfile.addEventListener('submit', newProfileFormSubmit);
 
 //function to put the users form input into local storage
-function newProfileToLocalStorage(){
+function profilesArrToLocalStorage(){
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
 };
 
+//working on storing the new profile without overwriting the previous new profile.
+var storedProfilesArr = JSON.parse(localStorage.getItem('profilesArr'));
+
+if (storedProfilesArr) {
+  for (var i = 0; i < storedProfilesArr.length; i++) {
+    // storedProfilesArr.push()
+  }
+}
+var getStorageArr = localStorage.getItem('profilesArr', JSON.parse(profilesArr));
 // newProfileToLocalStorage();
 // filling user data into profile page.
 // function changeName(){
