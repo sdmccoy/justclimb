@@ -1,5 +1,4 @@
 h1 {
-  /*font-family: helvetica;*/
   font-size: 3rem;
   color: #072112;
   margin-top: 15px;
@@ -85,7 +84,7 @@ label {
   width: 200px;
   height: 75px;
   background-color: rgb(206,219,233);
-  margin: 20px;
+  margin-left: 25%;
 }
 #namefield {
   padding: 20px;
@@ -94,10 +93,8 @@ label {
   padding: 20px;
 }
 #type-div {
-  padding: 20px;
-}
-#type-div {
   font-weight: bold;
+  padding: 20px;
 }
 #type-div label {
   font-weight: normal;
@@ -114,28 +111,4 @@ label {
   width: 100px;
   height: 40px;
   background-color: rgb(206,219,233);
-}
-#namefield-div {
-  display: none;
-}
-#location-div {
-  display: none;
-}
-#grade-div {
-  display: none;
-}
-#type-div {
-  display: none;
-}
-#-div {
-  display: none;
-}
-#namefield-div {
-  display: none;
-}
-.visible {
-  visibility: visible;
-}
-.not-visible {
-  visibility: hidden;
 }
