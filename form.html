@@ -14,25 +14,25 @@
     <img src="Assets/Images/mtLogo_cropped.jpg" alt="Just Climb ridgeline logo" id="navLogo"/>
     <h1>Just Climb</h1>
   </div>
-<section>
-  <div class="topnav">
-    <nav>
-      <a href="index.html" id="navLeft">Home</a> <!--The home page will include AboutMe information on Team Just Climb.-->
-      <a href="form.html" id="navCtr">Match Me</a><!--Link to form to match climbers-->
-      <a href="profile.html" id="navRight">Climbers</a><!--Link to complete list of climbers and their respective stats-->
-      <!-- <img src="assets/images/climbLogo_cropped.jpg" alt="Just Climb climbing logo" id="climbLogo"/> -->
-    </nav>
-  </div>
-</header>
-<body>
-  <img id="form-image" src="https://www.climbing.com/.image/t_share/MTM1MjQzMzIyNDM1MzE2MzU1/hplowering.jpg"/>
-  <section id="user-input-form">
-    <button onclick="hideResetButtonFunc()" id="reset-points" type="submit" name="resetpoints">Click to find your match!</button>
+  <section>
+    <div class="topnav">
+      <nav>
+        <a href="index.html" id="navLeft">Home</a> <!--The home page will include AboutMe information on Team Just Climb.-->
+        <a href="form.html" id="navCtr">Match Me</a><!--Link to form to match climbers-->
+        <a href="profile.html" id="navRight">Climbers</a><!--Link to complete list of climbers and their respective stats-->
+        <!-- <img src="assets/images/climbLogo_cropped.jpg" alt="Just Climb climbing logo" id="climbLogo"/> -->
+      </nav>
+    </div>
+  </header>
+  <body>
+    <img id="form-image" src="https://www.climbing.com/.image/t_share/MTM1MjQzMzIyNDM1MzE2MzU1/hplowering.jpg"/>
+    <section id="user-input-form">
+      <button id="reset-points" type="submit" name="resetpoints">Click to find your match!</button>
       <form method="post" id="profile-form">
         <fieldset id="clickSet">
           <div id="namefield">
             <label for="name">Name:</label>
-            <input type="button" id="user-name" name="username" />
+            <input type="text" id="user-name" name="username" />
           </div>
           <div id="location-div">
             <label for="gym-location">Gym Location:</label>
@@ -57,22 +57,26 @@
               <option value="5.13a - 5.13b / V8">5.13a - 5.13b / V8</option>
               <option value="5.13c - 5.13d / V9">5.13c - 5.13d / V9</option>
             </select>
-            </div>
-            <div id="type-div">
-              <ul>Type</ul>
-              <li><input type="checkbox" value="" id="sport-tr" name="sporttr">
+          </div>
+          <div id="type-div">
+            <ul>Type</ul>
+            <li><input type="checkbox" value="" id="sport-tr" name="sporttr">
               <label for="Sport Top Rope">Sport Top Rope</label></li>
               <li><input type="checkbox" value="" id="sport-lead" name="sportlead">
-              <label for="Sport Lead">Sport Lead</label></li>
-              <li><input type="checkbox" value="" id="bouldering" name="bouldering">
-              <label for="Bouldering">Bouldering</label></li>
-            </div>
-              <input type="submit" id="submit">
-          </fieldset>
-        </form>
-      </section>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="location.js"></script>
-    <script type="text/javascript" src="form.js"></script>
-  </body>
-</html>
+                <label for="Sport Lead">Sport Lead</label></li>
+                <li><input type="checkbox" value="" id="bouldering" name="bouldering">
+                  <label for="Bouldering">Bouldering</label></li>
+                </div>
+                <input type="submit" id="submit">
+              </fieldset>
+            </form>
+          </section>
+          <script type="text/javascript" src="form.js"></script>
+          <script type="text/javascript" src="app.js"></script>
+          <script type="text/javascript" src="location.js"></script>
+          <script type="text/javascript" src="skills.js"></script>
+          <script type="text/javascript" src="type.js"></script>
+          <script type="text/javascript" src="lead.js"></script>
+          <script type="text/javascript" src="boulder.js"></script>
+        </body>
+        </html>
