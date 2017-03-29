@@ -74,22 +74,24 @@ p {
   opacity: .3;
   height: 100%;
 }
-/*@keyframes moveImage {
+@keyframes moveImage {
   0% {
-    transform: translateY(400%);
+    transform: translateY(-65%);
   }
   100% {
     transform: translateY(0%);
   }*/
 section {
   margin-top: 5%;
+  }
 }
 #form-image {
   width: 300px;
   margin-top: 200px;
   float:left;
-  /*animation:
-  moveImage 1s ease-in 0s 1;*/
+  animation:
+  moveImage 2s ease-in 0s 1;
+
 }
 label {
   font-weight: bold;

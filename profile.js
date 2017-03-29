@@ -1,38 +1,41 @@
 'use strict';
 //Get local storage for new user. must navigate to match me page first...
 var storedprofilesArr = JSON.parse(localStorage.getItem('profilesArr'));
-var body = document.getElementsByTagName('body')[0];
+var profileSection = document.getElementById('profile-info');
 
 function populateNewUser(){
   for (var i = 0; i < storedprofilesArr.length; i++){
-    var nameDiv = document.createElement('div');
     var newSection = document.createElement('section');
-    body.appendChild(newSection);
-    nameDiv.innerText = storedprofilesArr[i].name;
+    profileSection.appendChild(newSection);
+    var nameDiv = document.createElement('div');
+    nameDiv.innerText = 'Name: ' + storedprofilesArr[i].name;
     newSection.appendChild(nameDiv);
     var contactDiv = document.createElement('div');
-    contactDiv.innerText = storedprofilesArr[i].contact;
+    contactDiv.innerText = 'Email: ' + storedprofilesArr[i].contact;
     newSection.appendChild(contactDiv);
     var gymDiv = document.createElement('div');
-    gymDiv.innerText = storedprofilesArr[i].gymLocation;
+    gymDiv.innerText = 'Gym Location: ' + storedprofilesArr[i].gymLocation;
     newSection.appendChild(gymDiv);
     var skillDiv = document.createElement('div');
-    skillDiv.innerText = storedprofilesArr[i].skill;
+    skillDiv.innerText = 'Skill Level: ' + storedprofilesArr[i].skill;
     newSection.appendChild(skillDiv);
-    var typeoneDiv = document.createElement('div');
-    newSection.appendChild(typeoneDiv);
+    var typeUL = document.createElement('ul');
+    newSection.appendChild(typeUL);
+    typeUL.innerText = 'Climbing Type: ';
     if (storedprofilesArr[i].sportTR === true){
-      typeoneDiv.innerText = 'SportTR';
+      var typeOneLI = document.createElement('li');
+      newSection.appendChild(typeOneLI);
+      typeOneLI.innerText = 'SportTR';
     }
-    var typetwoDiv = document.createElement('div');
-    newSection.appendChild(typetwoDiv);
     if (storedprofilesArr[i].sportLead === true){
-      typetwoDiv.innerText = 'SportLead';
+      var typeTwoLI = document.createElement('li');
+      newSection.appendChild(typeTwoLI);
+      typeTwoLI.innerText = 'SportLead';
     }
-    var typethreeDiv = document.createElement('div');
-    newSection.appendChild(typethreeDiv);
     if (storedprofilesArr[i].bouldering === true){
-      typethreeDiv.innerText = 'Bouldering';
+      var typeThreeLI = document.createElement('li');
+      newSection.appendChild(typeThreeLI);
+      typeThreeLI.innerText = 'Bouldering';
     }
   }
 };
