@@ -1,3 +1,5 @@
+'use strict';
+
 function clearScore(event) {
   event.preventDefault();
   for(var i = 0; i < profilesArr.length; i++) {

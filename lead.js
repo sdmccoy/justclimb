@@ -14,4 +14,3 @@ function matchSportLead() {
   // console.log('sport lead');
   // console.log(profilesArr);
 };
-// newProfile.addEventListener('submit', matchSportLead);

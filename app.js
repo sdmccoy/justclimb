@@ -46,22 +46,6 @@ function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, conta
   globalPoints.push(this.points);
 };
 
-function matchSkill() {
-  for(var i = 0; i < profilesArr.length; i++) {
-    if (lAndrews.skill === [i]) {
-      console.log('you have a match!');
-    } else if (lAndrews.skill -= [i]){
-      console.log('you have a match');
-    }
-    else if (lAndrews.skill += [i]) {
-      console.log('you have a match$');
-    }
-    else {
-      console.log('no good');
-    }
-  }
-}
-
 //takes the form input and creates a new profile and pushes in to the empty profilesArr
 function newProfileFormSubmit(event) {
   event.preventDefault();
@@ -75,7 +59,6 @@ function newProfileFormSubmit(event) {
   } else {
     var newSportTR = false;
   }
-  // newProfile.elements.sporttr.value;
   console.log(newSportTR);
   if (newProfile.elements.sportlead.checked) {
     var newSportLead = true;
@@ -99,10 +82,6 @@ function newProfileFormSubmit(event) {
   matchBouldering();
   this.points = 0;
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
-  // console.log(this);
-  // profilesArr.push(this);
-  // console.log(profilesArr);
-  // newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
@@ -113,6 +92,7 @@ newProfile.addEventListener('submit', newProfileFormSubmit);
 function newProfileToLocalStorage(){
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
 };
+
 newProfileToLocalStorage();
 // filling user data into profile page.
 // function changeName(){
