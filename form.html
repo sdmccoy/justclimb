@@ -37,9 +37,10 @@
           <div id="location-div">
             <label for="gym-location">Gym Location:</label>
             <select id="gym-location" name="gymlocation">
+              <option value="disabled">Select a Location</option>
               <option value="Vertical World Seattle">Vertical World Seattle</option>
               <option value="Vertical World Redmond">Vertical World Redmond</option>
-              <option value="Vertical World Seattle">Stone Gardens Seattle</option>
+              <option value="Stone Gardens Seattle">Stone Gardens Seattle</option>
               <option value="Stone Gardens Bellevue">Stone Gardens Bellevue</option>
               <option value="Seattle Bouldering Project">Seattle Bouldering Project</option>
             </select>
@@ -60,23 +61,23 @@
           </div>
           <div id="type-div">
             <ul>Type</ul>
-            <li><input type="checkbox" value="" id="sport-tr" name="sporttr">
+              <li><input type="checkbox" value="" id="sport-tr" name="sporttr">
               <label for="Sport Top Rope">Sport Top Rope</label></li>
               <li><input type="checkbox" value="" id="sport-lead" name="sportlead">
-                <label for="Sport Lead">Sport Lead</label></li>
-                <li><input type="checkbox" value="" id="bouldering" name="bouldering">
-                  <label for="Bouldering">Bouldering</label></li>
-                </div>
-                <input type="submit" id="submit">
-              </fieldset>
-            </form>
-          </section>
-          <script type="text/javascript" src="form.js"></script>
-          <script type="text/javascript" src="app.js"></script>
-          <script type="text/javascript" src="location.js"></script>
-          <script type="text/javascript" src="skills.js"></script>
-          <script type="text/javascript" src="type.js"></script>
-          <script type="text/javascript" src="lead.js"></script>
-          <script type="text/javascript" src="boulder.js"></script>
-        </body>
-        </html>
+              <label for="Sport Lead">Sport Lead</label></li>
+              <li><input type="checkbox" value="" id="bouldering" name="bouldering">
+              <label for="Bouldering">Bouldering</label></li>
+          </div>
+            <input type="submit" id="submit">
+        </fieldset>
+      </form>
+    </section>
+    <script type="text/javascript" src="showform.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="location.js"></script>
+    <script type="text/javascript" src="skills.js"></script>
+    <script type="text/javascript" src="sportr.js"></script>
+    <script type="text/javascript" src="lead.js"></script>
+    <script type="text/javascript" src="boulder.js"></script>
+  </body>
+</html>

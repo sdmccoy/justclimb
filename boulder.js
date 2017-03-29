@@ -12,5 +12,5 @@ function matchBouldering() {
     }
   }
   // console.log('bouldering');
-  console.log(profilesArr);
+  // console.log(profilesArr);
 };

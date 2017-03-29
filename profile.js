@@ -1,3 +1,4 @@
+'use strict';
 //Get local storage for new user. must navigate to match me page first...
 var storedprofilesArr = JSON.parse(localStorage.getItem('profilesArr'));
 var body = document.getElementsByTagName('body')[0];
