@@ -3,27 +3,29 @@
 <head>
   <meta charset="utf-8">
   <title>New Profile Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
+<aside><img src="Assets/Images/climbLogo_left.jpg" alt="Just Climb Logo" id="climbLogoLeft"/></aside>
+<aside><img src="Assets/Images/climbLogo_right.jpg" alt="Just Climb Logo" id="climbLogoRight"/></aside>
+<header>
+  <div class="logo">
+    <img src="Assets/Images/mtLogo_cropped.jpg" alt="Just Climb ridgeline logo" id="navLogo"/>
+    <h1>Just Climb</h1>
+  </div>
+<section>
+  <div class="topnav">
+    <nav>
+      <a href="index.html" id="navLeft">Home</a> <!--The home page will include AboutMe information on Team Just Climb.-->
+      <a href="form.html" id="navCtr">Match Me</a><!--Link to form to match climbers-->
+      <a href="profile.html" id="navRight">Climbers</a><!--Link to complete list of climbers and their respective stats-->
+      <!-- <img src="assets/images/climbLogo_cropped.jpg" alt="Just Climb climbing logo" id="climbLogo"/> -->
+    </nav>
+  </div>
+</header>
 <body>
-  <aside><img src="Assets/Images/climbLogo_left.jpg" alt="Just Climb Logo" id="climbLogoLeft"/></aside>
-  <aside><img src="Assets/Images/climbLogo_right.jpg" alt="Just Climb Logo" id="climbLogoRight"/></aside>
-  <header>
-    <div class="logo">
-      <img src="Assets/Images/mtLogo_cropped.jpg" alt="Just Climb ridgeline logo" id="navLogo"/>
-      <h1>Just Climb</h1>
-    </div>
-  <section>
-    <div class="topnav">
-      <nav>
-        <a href="index.html" id="navLeft">Home</a> <!--The home page will include AboutMe information on Team Just Climb.-->
-        <a href="form.html" id="navCtr">Match Me</a><!--Link to form to match climbers-->
-        <a href="profile.html" id="navRight">Climbers</a><!--Link to complete list of climbers and their respective stats-->
-        <!-- <img src="assets/images/climbLogo_cropped.jpg" alt="Just Climb climbing logo" id="climbLogo"/> -->
-      </nav>
-    </div>
-  </header>
+  <img id="form-image" src="https://www.climbing.com/.image/t_share/MTM1MjQzMzIyNDM1MzE2MzU1/hplowering.jpg"/>
   <section id="user-input-form">
     <form method="post" id="profile-form">
       <fieldset>
@@ -65,7 +67,7 @@
             <li><input type="checkbox" value="" id="bouldering" name="bouldering">
             <label for="Bouldering">Bouldering</label></li>
           </div>
-            <input type="submit">
+            <input type="submit" id="submit">
           </fieldset>
         </form>
       </section>

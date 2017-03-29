@@ -1,6 +1,6 @@
 h1 {
-  /*font-family: helvetica;*/
-  font-size: 3rem;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 4rem;
   color: #072112;
   margin-top: 15px;
   margin-bottom: 0px;
@@ -35,8 +35,7 @@ body {
   max-width: 100%;
 }
 .topnav a:hover {
-  background-color: #ddd;
-  color: 072112;
+  color: white;
 }
 .topnav a.active {
   background-color: #4CAF50;
@@ -71,12 +70,17 @@ p {
   opacity: .3;
   height: 100%;
 }
+#form-image {
+  width: 300px;
+  margin-top: 200px;
+  float:left;
+}
 label {
   font-weight: bold;
 }
 #user-input-form {
   text-align: left;
-  margin:auto;
+  margin-left: 500px;
   width: 400px;
   margin-top: 100px;
 }
