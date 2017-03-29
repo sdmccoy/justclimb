@@ -115,3 +115,27 @@ label {
   height: 40px;
   background-color: rgb(206,219,233);
 }
+#namefield-div {
+  display: none;
+}
+#location-div {
+  display: none;
+}
+#grade-div {
+  display: none;
+}
+#type-div {
+  display: none;
+}
+#-div {
+  display: none;
+}
+#namefield-div {
+  display: none;
+}
+.visible {
+  visibility: visible;
+}
+.not-visible {
+  visibility: hidden;
+}
