@@ -82,6 +82,11 @@ function newProfileFormSubmit(event) {
   matchBouldering();
   this.points = 0;
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+  // console.log(this);
+  // profilesArr.push(this);
+  // console.log(profilesArr);
+  // newProfileToLocalStorage();
+  //newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
@@ -93,7 +98,7 @@ function newProfileToLocalStorage(){
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
 };
 
-newProfileToLocalStorage();
+// newProfileToLocalStorage();
 // filling user data into profile page.
 // function changeName(){
 // }
