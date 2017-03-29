@@ -83,6 +83,8 @@ function newProfileFormSubmit(event) {
   matchBouldering();
   this.points = 0;
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+  window.location = 'chart.html';
+  // drawChart();
   // console.log(this);
   // profilesArr.push(this);
   // console.log(profilesArr);
