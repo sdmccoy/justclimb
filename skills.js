@@ -3,7 +3,6 @@
 
 function matchSkill() {
   var newSkill = newProfile.elements.grade.value;
-  console.log(newSkill);
   for (var i = 0; i < gradeArr.length; i++) {
     var findGradeInArr = gradeArr[i].includes(newSkill);
     if (findGradeInArr) {
@@ -26,7 +25,5 @@ function matchSkill() {
       }
     }
   }
-  console.log(profilesArr);
+  // console.log(profilesArr);
 };
-
-// newProfile.addEventListener('submit', matchSkill);

@@ -59,7 +59,6 @@ function newProfileFormSubmit(event) {
   } else {
     var newSportTR = false;
   }
-  // newProfile.elements.sporttr.value;
   console.log(newSportTR);
   if (newProfile.elements.sportlead.checked) {
     var newSportLead = true;
@@ -87,7 +86,7 @@ function newProfileFormSubmit(event) {
   // profilesArr.push(this);
   // console.log(profilesArr);
   // newProfileToLocalStorage();
-  newProfileToLocalStorage();
+  //newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
@@ -98,6 +97,8 @@ newProfile.addEventListener('submit', newProfileFormSubmit);
 function newProfileToLocalStorage(){
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
 };
+
+// newProfileToLocalStorage();
 // filling user data into profile page.
 // function changeName(){
 // }

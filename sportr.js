@@ -7,7 +7,7 @@ function matchSportTR() {
     for (var i = 0; i < profilesArr.length; i++) {
       if (profilesArr[i].sportTR === newSportTR) {
         profilesArr[i].points += 2;
-        console.log(profilesArr[i].points);
+        // console.log(profilesArr[i].points);
       }
     }
   }
