@@ -28,8 +28,11 @@ function drawChart() {
 // Sets chart view options.
   var options = {
     title: 'Climber Matches',
-    width: 600,
-    height: 500,
+    chartArea: {
+      left: 400,
+    },
+    width: 1000,
+    height: 700,
     is3D: true,
     colors: ['#403ABF', '#21357F', '#426BFF', '#111B40', '#3C60E5', '#10E5D5', '#B0E5BC']
   };
