@@ -258,7 +258,11 @@ nav {
 .clearfloat {
   clear: both;
 }
-
+#profiles-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
 
 /*#user-input-form {
   border: 1px solid black;
