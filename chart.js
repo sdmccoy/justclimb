@@ -40,11 +40,12 @@ function drawChart() {
   chart.draw(view, options);
   //Sets the selection handler to the link value.
   var selectHandler = function(e) {
-    storedprofilesArr.sort(function(b, a) {
+    storedprofilesArr.sort(function(a, b) {
       return parseFloat(b.points) - parseFloat(a.points);
     });
     console.log('yes', storedprofilesArr);
-    populateNewUser();
+    localStorage.profilesArr = JSON.stringify(storedprofilesArr);
+    // populateNewUser();
     window.location = data.getValue(chart.getSelection()[0]['row'], 2 );
   };
   //Select event listener.
