@@ -1,92 +1,268 @@
+h1 {
+  font-size: 3rem;
+  color: #160E54;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 4rem;
+  color: #072112;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  float: right;
+  margin-right: 38%;
+}
+
+body {
+  background-repeat: no-repeat;
+  max-width: 80%;
+  background-position: bottom;
+  background-position: right;
+  margin: auto;
+  color: #160E54;
+  font-family: helvetica;
+  font-size: 1.3rem;
+  background-color: white;
+}
+
 .topnav {
-  background-color: #996C56;
-  /*overflow: hidden;*/
-  /*list-style-type: none;*/
+  clear: both;
+  opacity: .8;
+  background: rgb(206,219,233); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(206,219,233,1) 0%, rgba(170,197,222,1) 17%, rgba(97,153,199,1) 50%, rgba(58,132,195,1) 51%, rgba(65,154,214,1) 59%, rgba(75,184,240,1) 71%, rgba(58,139,194,1) 84%, rgba(38,85,139,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(206,219,233,1) 0%,rgba(170,197,222,1) 17%,rgba(97,153,199,1) 50%,rgba(58,132,195,1) 51%,rgba(65,154,214,1) 59%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(206,219,233,1) 0%,rgba(170,197,222,1) 17%,rgba(97,153,199,1) 50%,rgba(58,132,195,1) 51%,rgba(65,154,214,1) 59%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=0 );
   text-align: center;
+  border-radius: 25px;
 }
- /*Style the links inside the navigation bar*/
+
 .topnav a {
-  /*float: left;*/
-  /*display: block;*/
-  color: #B5FFBC;
-  /*text-align: center;*/
-  padding: 14px 16px;
-  /*text-decoration: none;*/
-  font-size: 17px;
-  max-width: 100%;
-  /*height: auto;*/
-}
-div {
-  max-width: 100%;
-  height: auto;
-}
-/*span {
-  color: #B5FFBC;
-  text-align: center;
-  font-family: helvetica, sans-serif;
-  font-size: 3rem;*/
-/*}*/
-#span {
-
-}
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
   color: black;
+  padding: 0 9%;
+  font-size: 1.3rem;
+  max-width: 100%;
 }
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #4CAF50;
-  color: #B5FFBC;
-}
-#navLogo {
-  /*position: absolute;*/
-  top: 8px;
-  left: 8px;
-  border: 2px solid black;
-  /*list-style-type: none;*/
-}
-#climbLogo {
-  /*position: absolute;*/
-  /*left: 880px;
-  top: 8px;*/
-  border: 2px solid black;
-  /*list-style-type: none;*/
 
+.topnav a:hover {
+  border-radius: 100px;
+  color: white;
+  transition-duration:.3s;
+  transition-timing-function: ease;
 }
-/*ul  {*/
-  /*position: relative;*/
-  /*clear: both;
-  list-style-type: none;
-  /*height: auto;*/
-/*}*/
-/*#navLeft  {
-  /*display: inline;
-  margin-left: 20%;
+
+.topnav a.active {
+  border-radius: 100px;
+  background: white;
 }
+
+#navLogo {
+  overflow: visible;
+  position: absolute;
+  z-index: 99;
+  border: 2px solid 160E54;
+  height: 70px;
+}
+
+#navLeft {
+  text-decoration:none;
+  font-weight: bold;
+}
+
 #navCtr {
-  display: inline;
-  margin-left: 45%;
+  text-decoration:none;
+  font-weight: bold;
 }
 
 #navRight {
-  /*display: inline;*/
-  /*margin-left: 70%;*/
-/*}*/
-body {
-  /*display: block;*/
-  font-family: helvetica, sans-serif;
-  background-color: #FFF5F5;
-  max-width: 960px;
+  text-decoration:none;
+  font-weight: bold;
 }
-#logo {
-    display: block;
-    float: left;
 
+p {
+  text-align: justify;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 30px;
+  margin-left: 1%;
+  font-size: .7em;
 }
+
+#legal {
+  text-align: center;
+  font-size: .7rem;
+  margin-top: 5%;
+}
+
+#climbLogoRight {
+  position: fixed;
+  width: 10%;
+  right: 0px;
+  opacity: .3;
+  height: 100%;
+}
+
+#climbLogoLeft {
+  position: fixed;
+  width: 10%;
+  left: 0px;
+  opacity: .3;
+  height: 100%;
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translateY(-65%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+section {
+  z-index: 1;
+}
+
+#form-image {
+  float: left;
+  animation: moveImage 2s ease-out 0s 1;
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+}
+
+label {
+  font-weight: bold;
+}
+
+#user-input-form {
+  text-align: left;
+  margin-left: 35%;
+  margin-top: 100px;
+}
+
+#reset-points {
+  font-size: 20px;
+  width: 200px;
+  height: 75px;
+  background-color: rgb(206,219,233);
+}
+
+#namefield {
+  padding: 20px;
+}
+
+#location-div {
+  padding: 20px;
+}
+
+#type-div label {
+  font-weight: normal;
+}
+
+#type-div {
+  font-weight: bold;
+  list-style-type: none;
+  padding: 20px;
+}
+
+#grade-div {
+  padding: 20px;
+}
+#contact {
+  padding: 20px;
+}
+#submit {
+  margin: 20px;
+  width: 100px;
+  height: 40px;
+  float: left;
+  background-color: rgb(206,219,233);
+}
+
+.profile-pic {
+  height: 120px;
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  border-style: ridge;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#left-profile-pic {
+  float: left;
+  border-radius: 100%;
+}
+
+#right-profile-pic {
+  float: right;
+  border-radius: 100%;
+}
+
+h2 {
+  margin-left: 1%;
+  margin-bottom: 5%;
+}
+
+#acknowledgements {
+  height: 100%;
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  border-style: ridge;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 header {
-  /*max-width: 100%;*/
-  /*height: 100px;*/
+  z-index: 2;
 }
-#form {
+
+nav {
+  z-index: 2;
+}
+
+.logo {
+  z-index: 2;
+}
+
+.pictureImg {
+  border-radius: 125px;
+  width: 100%;
+}
+
+#imageupload {
+  padding: 20px;
+}
+
+#imagetextdiv {
+  text-align: left;
+  margin-top: 5px;
+}
+
+#imgurltext {
+  display: inline-block;
+  float: left;
+}
+
+#addressimg {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  border: .5px solid black;
+}
+
+#addressimg:hover {
+  transform: scale(5);
+}
+
+.clearfloat {
+  clear: both;
+}
+#profiles-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+#about-us {
+  margin-top: 50px;
 }
