@@ -22,7 +22,7 @@ function newProfileFormSubmit(event) {
   }
   var newSkill = newProfile.elements.grade.value;
   var newContact = newProfile.elements.contact.value;
-  var newImage = newProfile.elements.image.value;
+  var newImage = newProfile.elements.imgurl.value;
   matchGymLocation();
   matchSkill();
   matchSportTR();
