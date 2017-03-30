@@ -2,6 +2,7 @@
 //Get local storage for new user. must navigate to match me page first...
 var storedprofilesArr = JSON.parse(localStorage.getItem('profilesArr'));
 var profileSection = document.getElementById('profile-info');
+var picturesArr = ['Assets/Images/profile_Images/Andrew_Johnson.jpg', 'Assets/Images/profile_Images/Andrew_McGuiness.jpg', 'Assets/Images/profile_Images/Anthony_Sparks.jpg', 'Assets/Images/profile_Images/Brad_Mcarthur.jpg', 'Assets/Images/profile_Images/Brad_Montegna.jpg', 'Assets/Images/profile_Images/Bryan_Cantrell.jpg', 'Assets/Images/profile_Images/Grayson_O\'neill.jpg', 'Assets/Images/profile_Images/Jason_Dempsey', 'Assets/Images/profile_Images/Jenna_Twanbly', 'Assets/Images/profile_Images/Jenna_Twanbly',];
 
 function populateNewUser(){
   for (var i = 0; i < storedprofilesArr.length; i++){
