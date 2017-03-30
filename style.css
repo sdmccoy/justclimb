@@ -41,28 +41,22 @@ body {
 .topnav a:hover {
 
   background-color: white;
-  color: 160E54;
-  color: white;
+  /*color: 160E54;*/
+  color: black;
 }
 .topnav a.active {
   background-color: white;
-  color: #B5FFBC;
+  color: black;
 }
 #navLogo {
-
-  top: 0px;
-overflow: visible;
- border: 2px solid 072112;
+  overflow: visible;
   position: absolute;
   z-index: 99;
-  top: 8px;
-  left: 8px;
   border: 2px solid 160E54;
-
 }
 p {
-  margin-top: 100px;
-  padding: 5%;
+  /*margin-top: 100px;*/
+  /*padding: 5%;*/
   text-align: justify;
   /*margin-left: 10%;*/
   max-width: 100%;
