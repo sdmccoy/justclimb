@@ -12,7 +12,7 @@ function drawChart() {
   console.log('made it');
   var data = google.visualization.arrayToDataTable([
     ['Climber', 'Match Percentage'],
-    ['climber 1', 10],
+    ['climber 1', 0],
   ]);
 
   for(var i = 0; i < profilesArr.length; i++) {

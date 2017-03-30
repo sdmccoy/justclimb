@@ -93,16 +93,8 @@ function newProfileFormSubmit(event) {
   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
   console.log(creatingNewProfile);
   console.log(localStorage);
-  // profilesArrToLocalStorage();
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
-
-  // window.location = 'chart.html';
-  // drawChart();
-  // // console.log(this);
-  // profilesArr.push(this);
-  // profilesArrToLocalStorage();
-
-  // console.log(profilesArr);
+  window.location = 'chart.html';
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
@@ -117,12 +109,7 @@ function profilesArrToLocalStorage(){
   } else {
     generateDBProfiles();
   }
-  // for (var i = 0; i < profilesArr.length; i++) {
-  //   totalProfileArr[i] = (accumProfileArr[i] || 0) + (currentProfileArr[i] || 0);
-  //   console.log(totalProfileArr);
-  // }
 };
-// profilesArrToLocalStorage();
 
 var currentProfileArr = [];
 console.log(currentProfileArr);
