@@ -13,9 +13,10 @@ function drawChart() {
   ]);
 
   for(var i = 0; i < profilesArr.length; i++) {
+    var topMatches = [profilesArr[i].name, profilesArr[i].points, 'profile.html'];
     if(profilesArr[i].points > 6) {
       data.addRows([
-      [profilesArr[i].name, profilesArr[i].points, 'profile.html'],
+        topMatches,
       ]);
     }
   };
