@@ -2,6 +2,7 @@
 google.charts.load('visualization', '1', {packages:['corechart']});
 //Set a callback to run when the google API is loaded.
 google.charts.setOnLoadCallback(drawChart);
+
 //instantiates the pie chart, passes in the data and draws it.
 function drawChart() {
   //Create table data.
@@ -39,6 +40,10 @@ function drawChart() {
   chart.draw(view, options);
   //Sets the selection handler to the link value.
   var selectHandler = function(e) {
+    storedprofilesArr.sort(function(a, b) {
+      return parseFloat(a.points) - parseFloat(b.points);
+    });
+    populateNewUser();
     window.location = data.getValue(chart.getSelection()[0]['row'], 2 );
   };
   //Select event listener.
