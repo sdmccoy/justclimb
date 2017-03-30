@@ -9,6 +9,13 @@
   font-size: .8em;
 }
 
-#contact {
-  
+.profileDiv, .typeUL {
+  text-align: center;
+}
+
+.titles{
+  text-align: center;
+  font-weight: 700;
+  text-decoration: underline;
+  color: green;
 }
