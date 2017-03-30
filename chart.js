@@ -2,23 +2,31 @@
 google.charts.load('visualization', '1', {packages:['corechart']});
 //Set a callback to run when the google API is loaded.
 google.charts.setOnLoadCallback(drawChart);
-
+// var arrayName = ['Zach', 'Tony', 'Scott', 'Matt'];
+// var arrayPoints = [2, 4, 7, 8];
 //Callback that creates and populates a data table.
 //instantiates the pie chart, passes in the data and draws it.
 function drawChart() {
   //Create table data.
+  var profilesArr = JSON.parse(localStorage.getItem('profilesArr'));
+  console.log('made it');
   var data = google.visualization.arrayToDataTable([
-    ['Climber', 'link', 'Match Percentage'],
-    ['Climber 1', 'profile.html', 10],
-    ['Climber 2', 'profile.html', 3],
-    ['Climber 3', 'profile.html', 4],
-    ['Climber 4', 'profile.html', 2],
-    ['Climber 5', 'profile.html', 5]
+    ['Climber', 'Match Percentage'],
+    ['climber 1', 10],
   ]);
 
+  for(var i = 0; i < profilesArr.length; i++) {
+    if(profilesArr[i].points > 6) {
+      data.addRows([
+      [profilesArr[i].name, profilesArr[i].points],
+      ]);
+    }
+  };
+
   var view = new google.visualization.DataView(data);
+
 // View columns 0 and 2, the links column is hidden.
-  view.setColumns([0, 2]);
+  view.setColumns([0, 1]);
 // Sets chart view options.
   var options = {
     title: 'Climber Matches',

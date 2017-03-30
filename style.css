@@ -1,11 +1,14 @@
 h1 {
-  /*font-family: helvetica;*/
   font-size: 3rem;
+
   color: #160E54;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 4rem;
+  color: #072112;
   margin-top: 15px;
   margin-bottom: 0px;
   float: right;
-  margin-right: 40%;
+  margin-right: 38%;
 }
 body {
   background-repeat: no-repeat;
@@ -35,8 +38,10 @@ body {
   max-width: 100%;
 }
 .topnav a:hover {
+
   background-color: white;
   color: 160E54;
+  color: white;
 }
 .topnav a.active {
   background-color: white;
@@ -53,10 +58,18 @@ p {
   text-align: justify;
   /*margin-left: 10%;*/
   max-width: 100%;
+  display: block;
+  margin-bottom: 30px;
+  /*margin-top: 100px;*/
+  /*padding: 1%;*/
+  margin-left: 1%;
+  /*max-width: 100%;*/
+  font-size: .7em;
 }
 #legal {
   text-align: center;
   font-size: .7rem;
+  margin-top: 5%;
 }
 #climbLogoRight {
   position: fixed;
@@ -72,12 +85,31 @@ p {
   opacity: .3;
   height: 100%;
 }
+@keyframes moveImage {
+  0% {
+    transform: translateY(-65%);
+  }
+  100% {
+    transform: translateY(0%);
+  }*/
+section {
+  margin-top: 5%;
+  }
+}
+#form-image {
+  width: 300px;
+  margin-top: 200px;
+  float:left;
+  animation:
+  moveImage 2s ease-in 0s 1;
+
+}
 label {
   font-weight: bold;
 }
 #user-input-form {
   text-align: left;
-  margin:auto;
+  margin-left: 500px;
   width: 400px;
   margin-top: 100px;
 }
@@ -86,7 +118,7 @@ label {
   width: 200px;
   height: 75px;
   background-color: rgb(206,219,233);
-  margin: 20px;
+  margin-left: 25%;
 }
 #namefield {
   padding: 20px;
@@ -95,10 +127,8 @@ label {
   padding: 20px;
 }
 #type-div {
-  padding: 20px;
-}
-#type-div {
   font-weight: bold;
+  padding: 20px;
 }
 #type-div label {
   font-weight: normal;
@@ -115,4 +145,33 @@ label {
   width: 100px;
   height: 40px;
   background-color: rgb(206,219,233);
+}
+.profile-pic {
+  height: 120px;
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  border-style: ridge;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#left-profile-pic {
+  float: left;
+  border-radius: 100%;
+}
+#right-profile-pic {
+  float: right;
+  border-radius: 100%;
+}
+h2 {
+  margin-top: 5%;
+  margin-left: 1%;
+  margin-bottom: 5%;
+}
+#acknowledgements {
+  height: 100%;
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  border-style: ridge;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
