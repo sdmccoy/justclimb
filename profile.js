@@ -45,24 +45,27 @@ function populateNewUser(){
     skillDiv.className = 'profileDiv';
     skillDiv.innerText = storedprofilesArr[i].skill;
     newSection.appendChild(skillDiv);
-    var typeUL = document.createElement('div');
-    typeUL.className = 'titles';
-    typeUL.innerText = 'Climbing Type';
-    newSection.appendChild(typeUL);
+    var typeDiv = document.createElement('div');
+    typeDiv.className = 'titles';
+    typeDiv.innerText = 'Climbing Type';
+    newSection.appendChild(typeDiv);
     if (storedprofilesArr[i].sportTR === true){
-      var typeOneLI = document.createElement('li');
-      newSection.appendChild(typeOneLI);
-      typeOneLI.innerText = 'SportTR';
+      var sportTRDiv = document.createElement('div');
+      newSection.appendChild(sportTRDiv);
+      sportTRDiv.className = 'profileDiv';
+      sportTRDiv.innerText = 'Sport Top Rope';
     }
     if (storedprofilesArr[i].sportLead === true){
-      var typeTwoLI = document.createElement('li');
-      newSection.appendChild(typeTwoLI);
-      typeTwoLI.innerText = 'SportLead';
+      var sportLeadDiv = document.createElement('div');
+      newSection.appendChild(sportLeadDiv);
+      sportLeadDiv.className = 'profileDiv';
+      sportLeadDiv.innerText = 'Sport Lead';
     }
     if (storedprofilesArr[i].bouldering === true){
-      var typeThreeLI = document.createElement('li');
-      newSection.appendChild(typeThreeLI);
-      typeThreeLI.innerText = 'Bouldering';
+      var boulderingDiv = document.createElement('div');
+      newSection.appendChild(boulderingDiv);
+      boulderingDiv.className = 'profileDiv';
+      boulderingDiv.innerText = 'Bouldering';
     }
   }
 };
