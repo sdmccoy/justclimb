@@ -168,3 +168,11 @@ h2 {
   border-style: ridge;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+.userSection {
+  margin: 20px;
+}
+
+.profileDiv {
+  margin: 5px;
+}
