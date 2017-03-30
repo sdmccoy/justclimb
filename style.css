@@ -31,23 +31,26 @@ body {
   background: linear-gradient(to bottom,  rgba(206,219,233,1) 0%,rgba(170,197,222,1) 17%,rgba(97,153,199,1) 50%,rgba(58,132,195,1) 51%,rgba(65,154,214,1) 59%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 84%,rgba(38,85,139,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=0 );
   text-align: center;
+  border-radius: 25px;
 }
 
 .topnav a {
-  color: #160E54;
-  padding: .5% 9%;
-  font-size: 1.5rem;
+  color: black;
+  padding: 0 9%;
+  font-size: 1.3rem;
   max-width: 100%;
 }
 
 .topnav a:hover {
-  background-color: white;
-  color: black;
+  border-radius: 100px;
+  color: white;
+  transition-duration:.3s;
+  transition-timing-function: ease;
 }
 
 .topnav a.active {
-  background-color: white;
-  color: black;
+  border-radius: 100px;
+  background: white;
 }
 
 #navLogo {
@@ -55,6 +58,22 @@ body {
   position: absolute;
   z-index: 99;
   border: 2px solid 160E54;
+  height: 70px;
+}
+
+#navLeft {
+  text-decoration:none;
+  font-weight: bold;
+}
+
+#navCtr {
+  text-decoration:none;
+  font-weight: bold;
+}
+
+#navRight {
+  text-decoration:none;
+  font-weight: bold;
 }
 
 p {
