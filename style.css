@@ -153,11 +153,14 @@ label {
 #grade-div {
   padding: 20px;
 }
-
+#contact {
+  padding: 20px;
+}
 #submit {
   margin: 20px;
   width: 100px;
   height: 40px;
+  float: left;
   background-color: rgb(206,219,233);
 }
 
