@@ -48,6 +48,7 @@
           <div id="grade-div">
             <label for="grade">Grade:</label>
             <select id="grade" name="grade">
+              <option value="disabled">Select a Skill Level</option>
               <option value="5.5 - 5.7 / V0">5.5 - 5.7 / V0</option>
               <option value="5.8 - 5.9 / V1">5.8 - 5.9 / V1</option>
               <option value="5.10a - 5.10b / V2">5.10a - 5.10b / V2</option>
@@ -60,7 +61,7 @@
             </select>
           </div>
           <div id="type-div">
-            <ul>Type</ul>
+            <ul>Type:</ul>
               <li><input type="checkbox" value="" id="sport-tr" name="sporttr">
               <label for="Sport Top Rope">Sport Top Rope</label></li>
               <li><input type="checkbox" value="" id="sport-lead" name="sportlead">
@@ -71,6 +72,17 @@
           <div id="contact">
             <label for="contact">Email:</label>
             <input type="email" id="email" name="contact"/>
+          </div>
+          <div id="imageupload">
+            <label for="contact">Image:</label>
+            <input type="url" id="imgurl" name="imageurl"/>
+          </div>
+          <div id="imagetextdiv">
+            <p id="imgurltext">Find your photo online. Right click and copy image address. Paste in the field.</p>
+            <img id="addressimg" src="Assets/Images/imageaddress.jpg" alt=""/>
+          </div>
+          <div class="clearfloat">
+
           </div>
             <input type="submit" id="submit">
         </fieldset>

@@ -103,8 +103,7 @@ section {
 
 #form-image {
   float: left;
-  animation:
-  moveImage 2s ease-out 0s 1;
+  animation: moveImage 2s ease-out 0s 1;
   overflow: hidden;
   z-index: -1;
   position: absolute;
@@ -136,18 +135,14 @@ label {
   padding: 20px;
 }
 
-#type-div {
-  font-weight: bold;
-  padding: 20px;
-}
-
 #type-div label {
   font-weight: normal;
 }
 
-#type-div li {
+#type-div {
+  font-weight: bold;
   list-style-type: none;
-  padding: 10px;
+  padding: 20px;
 }
 
 #grade-div {
@@ -213,3 +208,41 @@ nav {
   border-radius: 125px;
   width: 100%;
 }
+
+#imageupload {
+  padding: 20px;
+}
+
+#imagetextdiv {
+  text-align: left;
+  margin-top: 5px;
+}
+
+#imgurltext {
+  display: inline-block;
+  float: left;
+}
+
+#addressimg {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  border: .5px solid black;
+}
+
+#addressimg:hover {
+  transform: scale(5);
+}
+
+.clearfloat {
+  clear: both;
+}
+
+
+/*#user-input-form {
+  border: 1px solid black;
+  text-align: left;
+
+}*/
