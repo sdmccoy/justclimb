@@ -2,36 +2,53 @@
 //Get local storage for new user. must navigate to match me page first...
 var storedprofilesArr = JSON.parse(localStorage.getItem('profilesArr'));
 var profileSection = document.getElementById('profile-info');
-var picturesArr = ['Assets/Images/profile_Images/Andrew_Johnson.jpg', 'Assets/Images/profile_Images/Andrew_McGuiness.jpg', 'Assets/Images/profile_Images/Anthony_Sparks.jpg', 'Assets/Images/profile_Images/Brad_Mcarthur.jpg', 'Assets/Images/profile_Images/Brad_Montegna.jpg', 'Assets/Images/profile_Images/Bryan_Cantrell.jpg', 'Assets/Images/profile_Images/Grayson_O\'neill.jpg', 'Assets/Images/profile_Images/Jason_Dempsey.jpg', 'Assets/Images/profile_Images/Jenna_Twanbly.jpg', 'Assets/Images/profile_Images/Jon_Smythe.jpg', 'Assets/Images/profile_Images/Jose_Martinez.jpg', 'Assets/Images/profile_Images/Lance_Andrews.jpg', 'Assets/Images/profile_Images/Leslie_Bordain.jpg', 'Assets/Images/profile_Images/Marcus_Lindell.jpg', 'Assets/Images/profile_Images/Mike_Ryan.jpg', 'Assets/Images/profile_Images/Milo_Laughlin.jpg', 'Assets/Images/profile_Images/Neil_Johnson.jpg', 'Assets/Images/profile_Images/Reid_Garafalo.jpg', 'Assets/Images/profile_Images/Teddy_Lundell.jpg', 'Assets/Images/profile_Images/Tony_Janko.jpg'];
+var picturesArr = ['Assets/profile_Images/Andrew_Johnson.jpg', 'Assets/profile_Images/Andrew_McGuiness.jpg', 'Assets/profile_Images/Anthony_Sparks.jpg', 'Assets/profile_Images/Brad_Mcarthur.jpg', 'Assets/profile_Images/Brad_Montegna.jpg', 'Assets/profile_Images/Bryan_Cantrell.jpg', 'Assets/profile_Images/Grayson_O\'neill.jpg', 'Assets/profile_Images/Jason_Dempsey.jpg', 'Assets/profile_Images/Jenna_Twanbly.jpg', 'Assets/profile_Images/Jon_Smythe.jpg', 'Assets/profile_Images/Jose_Martinez.jpg', 'Assets/profile_Images/Lance_Andrews.jpg', 'Assets/profile_Images/Leslie_Bordain.jpg', 'Assets/profile_Images/Marcus_Lindell.jpg', 'Assets/profile_Images/Mike_Ryan.jpg', 'Assets/profile_Images/Milo_Laughlin.jpg', 'Assets/profile_Images/Neil_Johnson.jpg', 'Assets/profile_Images/Reid_Garafalo.jpg', 'Assets/profile_Images/Teddy_Lundell.jpg', 'Assets/profile_Images/Tony_Janko.jpg'];
 
 function populateNewUser(){
   for (var i = 0; i < storedprofilesArr.length; i++){
     var newSection = document.createElement('section');
     newSection.className = 'userSection';
     profileSection.appendChild(newSection);
-    var pictureDiv = document.createElement('div');
-    pictureDiv.className = 'pictureDiv';
-    newSection.appendChild(pictureDiv);
+    var pictureImg = document.createElement('img');
+    pictureImg.setAttribute('src', picturesArr[i]);
+    pictureImg.className = 'pictureImg';
+    newSection.appendChild(pictureImg);
+    var nameDiv = document.createElement('div');
+    nameDiv.className = 'titles';
+    nameDiv.innerText = 'Name';
+    newSection.appendChild(nameDiv);
     var nameDiv = document.createElement('div');
     nameDiv.className = 'profileDiv';
-    nameDiv.innerText = 'Name: ' + storedprofilesArr[i].name;
+    nameDiv.innerText = storedprofilesArr[i].name;
     newSection.appendChild(nameDiv);
     var contactDiv = document.createElement('div');
+    contactDiv.className = 'titles';
+    contactDiv.innerText = 'Email';
+    newSection.appendChild(contactDiv);
+    var contactDiv = document.createElement('div');
     contactDiv.className = 'profileDiv';
-    contactDiv.innerText = 'Email: ' + storedprofilesArr[i].contact;
+    contactDiv.innerText = storedprofilesArr[i].contact;
     newSection.appendChild(contactDiv);
     var gymDiv = document.createElement('div');
+    gymDiv.className = 'titles';
+    gymDiv.innerText = 'Gym';
+    newSection.appendChild(gymDiv);
+    var gymDiv = document.createElement('div');
     gymDiv.className = 'profileDiv';
-    gymDiv.innerText = 'Gym Location: ' + storedprofilesArr[i].gymLocation;
+    gymDiv.innerText = storedprofilesArr[i].gymLocation;
     newSection.appendChild(gymDiv);
     var skillDiv = document.createElement('div');
-    skillDiv.className = 'profileDiv';
-    skillDiv.innerText = 'Skill Level: ' + storedprofilesArr[i].skill;
+    skillDiv.className = 'titles';
+    skillDiv.innerText = 'Skill Level';
     newSection.appendChild(skillDiv);
-    var typeUL = document.createElement('ul');
-    typeUL.className = 'typeUL';
+    var skillDiv = document.createElement('div');
+    skillDiv.className = 'profileDiv';
+    skillDiv.innerText = storedprofilesArr[i].skill;
+    newSection.appendChild(skillDiv);
+    var typeUL = document.createElement('div');
+    typeUL.className = 'titles';
+    typeUL.innerText = 'Climbing Type';
     newSection.appendChild(typeUL);
-    typeUL.innerText = 'Climbing Type: ';
     if (storedprofilesArr[i].sportTR === true){
       var typeOneLI = document.createElement('li');
       newSection.appendChild(typeOneLI);

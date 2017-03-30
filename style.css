@@ -1,6 +1,5 @@
 h1 {
   font-size: 3rem;
-
   color: #160E54;
   font-family: 'Cabin Sketch', cursive;
   font-size: 4rem;
@@ -10,6 +9,7 @@ h1 {
   float: right;
   margin-right: 38%;
 }
+
 body {
   background-repeat: no-repeat;
   max-width: 80%;
@@ -21,8 +21,8 @@ body {
   font-size: 1.3rem;
   background-color: white;
 }
-.topnav {
 
+.topnav {
   clear: both;
   opacity: .8;
   background: rgb(206,219,233); /* Old browsers */
@@ -32,47 +32,46 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=0 );
   text-align: center;
 }
+
 .topnav a {
   color: #160E54;
   padding: .5% 9%;
   font-size: 1.5rem;
   max-width: 100%;
 }
-.topnav a:hover {
 
+.topnav a:hover {
   background-color: white;
-  /*color: 160E54;*/
   color: black;
 }
+
 .topnav a.active {
   background-color: white;
   color: black;
 }
+
 #navLogo {
   overflow: visible;
   position: absolute;
   z-index: 99;
   border: 2px solid 160E54;
 }
+
 p {
-  /*margin-top: 100px;*/
-  /*padding: 5%;*/
   text-align: justify;
-  /*margin-left: 10%;*/
   max-width: 100%;
   display: block;
   margin-bottom: 30px;
-  /*margin-top: 100px;*/
-  /*padding: 1%;*/
   margin-left: 1%;
-  /*max-width: 100%;*/
   font-size: .7em;
 }
+
 #legal {
   text-align: center;
   font-size: .7rem;
   margin-top: 5%;
 }
+
 #climbLogoRight {
   position: fixed;
   width: 10%;
@@ -80,6 +79,7 @@ p {
   opacity: .3;
   height: 100%;
 }
+
 #climbLogoLeft {
   position: fixed;
   width: 10%;
@@ -87,21 +87,21 @@ p {
   opacity: .3;
   height: 100%;
 }
+
 @keyframes moveImage {
   0% {
     transform: translateY(-65%);
   }
   100% {
     transform: translateY(0%);
-  }*/
-section {
-  margin-top: 5%;
-  z-index: 1;
   }
 }
+
+section {
+  z-index: 1;
+}
+
 #form-image {
-  /*width: 300px;
-  margin-top: 200px;*/
   float: left;
   animation:
   moveImage 2s ease-out 0s 1;
@@ -110,37 +110,46 @@ section {
   position: absolute;
   top: 100px;
 }
+
 label {
   font-weight: bold;
 }
+
 #user-input-form {
   text-align: left;
   margin-left: 35%;
   margin-top: 100px;
 }
+
 #reset-points {
   font-size: 20px;
   width: 200px;
   height: 75px;
   background-color: rgb(206,219,233);
 }
+
 #namefield {
   padding: 20px;
 }
+
 #location-div {
   padding: 20px;
 }
+
 #type-div {
   font-weight: bold;
   padding: 20px;
 }
+
 #type-div label {
   font-weight: normal;
 }
+
 #type-div li {
   list-style-type: none;
   padding: 10px;
 }
+
 #grade-div {
   padding: 20px;
 }
@@ -154,6 +163,7 @@ label {
   float: left;
   background-color: rgb(206,219,233);
 }
+
 .profile-pic {
   height: 120px;
   border: 1px solid black;
@@ -162,19 +172,22 @@ label {
   border-style: ridge;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 #left-profile-pic {
   float: left;
   border-radius: 100%;
 }
+
 #right-profile-pic {
   float: right;
   border-radius: 100%;
 }
+
 h2 {
-  margin-top: 5%;
   margin-left: 1%;
   margin-bottom: 5%;
 }
+
 #acknowledgements {
   height: 100%;
   border: 1px solid black;
@@ -183,12 +196,20 @@ h2 {
   border-style: ridge;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 header {
   z-index: 2;
 }
+
 nav {
   z-index: 2;
 }
+
 .logo {
   z-index: 2;
+}
+
+.pictureImg {
+  border-radius: 125px;
+  width: 100%;
 }
