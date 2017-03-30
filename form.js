@@ -22,12 +22,13 @@ function newProfileFormSubmit(event) {
   }
   var newSkill = newProfile.elements.grade.value;
   var newContact = newProfile.elements.contact.value;
+  var newImage = newProfile.elements.image.value;
   matchGymLocation();
   matchSkill();
   matchSportTR();
   matchSportLead();
   matchBouldering();
-  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill, newContact);
+  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill, newContact, newImage);
   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
   window.location = 'chart.html';
