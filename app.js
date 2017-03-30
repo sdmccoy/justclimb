@@ -34,6 +34,8 @@ var gymLocation = document.getElementById('gymLocation');
 var grade = document.getElementById('grade');
 var contact = document.getElementById('contact');
 
+profilesArrToLocalStorage();
+
 // function generateDBProfiles() {
 function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, contact) {
   this.name = name;
@@ -78,24 +80,21 @@ function newProfileFormSubmit(event) {
   console.log(newBouldering);
   var newSkill = newProfile.elements.grade.value;
   console.log(newSkill);
+  console.log('before points', profilesArr);
   // var newContact = newProfile.elements.contact.value;
   matchGymLocation();
   matchSkill();
   matchSportTR();
   matchSportLead();
   matchBouldering();
-  this.points = 0;
-  profilesArrToLocalStorage();
+  // this.points = 0;
+  console.log('aftr points', profilesArr);
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
   console.log(creatingNewProfile);
   console.log(localStorage);
-  
+  localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
   window.location = 'chart.html';
-  // drawChart();
-  // console.log(this);
-  profilesArr.push(this);
-  // console.log(profilesArr);
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
@@ -106,22 +105,11 @@ newProfile.addEventListener('submit', newProfileFormSubmit);
 function profilesArrToLocalStorage(){
   console.log(JSON.parse(localStorage.getItem('profilesArr')));
   if (JSON.parse(localStorage.getItem('profilesArr'))) {
-    var accumProfileArr = JSON.parse(localStorage.getItem('profilesArr'));
-    console.log(accumProfileArr);
+    profilesArr = JSON.parse(localStorage.getItem('profilesArr'));
   } else {
     generateDBProfiles();
-    console.log(localStorage);
-    localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
-    console.log(localStorage);
-    // var accumProfileArr = JSON.parse(localStorage.getItem('profilesArr'));
-    // console.log(accumProfileArr);
   }
-  // for (var i = 0; i < profilesArr.length; i++) {
-  //   totalProfileArr[i] = (accumProfileArr[i] || 0) + (currentProfileArr[i] || 0);
-  //   console.log(totalProfileArr);
-  // }
 };
-profilesArrToLocalStorage();
 
 var currentProfileArr = [];
 console.log(currentProfileArr);

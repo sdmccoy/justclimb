@@ -8,18 +8,19 @@ google.charts.setOnLoadCallback(drawChart);
 //instantiates the pie chart, passes in the data and draws it.
 function drawChart() {
   //Create table data.
+  var profilesArr = JSON.parse(localStorage.getItem('profilesArr'));
+  console.log('made it');
   var data = google.visualization.arrayToDataTable([
     ['Climber', 'Match Percentage'],
-    ['climber 1', 10],
+    ['climber 1', 0],
   ]);
 
-  for(var i = 0; i < arrayName.length; i++) {
-    // if(profilesArr[i].points > 6) {
-    data.addRows([
+  for(var i = 0; i < profilesArr.length; i++) {
+    if(profilesArr[i].points > 6) {
+      data.addRows([
       [profilesArr[i].name, profilesArr[i].points],
-      // [arrayName[i], arrayPoints[i]]
-    ]);
-    // }
+      ]);
+    }
   };
 
   var view = new google.visualization.DataView(data);
