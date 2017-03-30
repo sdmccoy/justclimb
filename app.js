@@ -90,11 +90,11 @@ function newProfileFormSubmit(event) {
   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
   console.log(creatingNewProfile);
   console.log(localStorage);
-  // currentProfileArr.push(creatingNewProfile);
-  // window.location = 'chart.html';
+  
+  window.location = 'chart.html';
   // drawChart();
   // console.log(this);
-  // profilesArr.push(this);
+  profilesArr.push(this);
   // console.log(profilesArr);
 };
 
