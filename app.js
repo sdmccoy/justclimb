@@ -5,6 +5,7 @@ var typeArr = ['Sport TR', 'Sport Lead', 'Bouldering'];
 var locationArr = ['Vertical World Seattle', 'Vertical World Redmond', 'Stone Gardens Seattle', 'Stone Gardens Bellevue', 'Seattle Bouldering Project'];
 var profilesArr = [];
 var globalPoints = [];
+
 function generateDBProfiles() {
   var aJohnson = new Profile('Andrew Johnson', 'Vertical World Seattle', true, false, false, '5.5 - 5.7 / V0', 'andrew@johnson.com');
   var aMcguine = new Profile('Andrew McGuine', 'Vertical World Redmond', false, true, false, '5.10a - 5.10b / V2', 'andrew@mcguine.com');
@@ -36,6 +37,16 @@ var contact = document.getElementById('contact');
 
 profilesArrToLocalStorage();
 
+//function to put the users form input into local storage
+function profilesArrToLocalStorage(){
+  // console.log(JSON.parse(localStorage.getItem('profilesArr')));
+  if (JSON.parse(localStorage.getItem('profilesArr'))) {
+    profilesArr = JSON.parse(localStorage.getItem('profilesArr'));
+  } else {
+    generateDBProfiles();
+  }
+};
+
 // function generateDBProfiles() {
 function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, contact) {
   this.name = name;
@@ -50,66 +61,58 @@ function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, conta
   globalPoints.push(this.points);
     // profilesArrToLocalStorage();
 };
+localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
+
 // };
-
-//takes the form input and creates a new profile and pushes in to the empty profilesArr
-function newProfileFormSubmit(event) {
-  event.preventDefault();
-  console.log('event test');
-  var newName = newProfile.elements.username.value;
-  console.log(newName);
-  var newLocation = newProfile.elements.gymlocation.value;
-  console.log(newLocation);
-  if (newProfile.elements.sporttr.checked) {
-    var newSportTR = true;
-  } else {
-    var newSportTR = false;
-  }
-  console.log(newSportTR);
-  if (newProfile.elements.sportlead.checked) {
-    var newSportLead = true;
-  } else {
-    var newSportLead = false;
-  }
-  console.log(newSportLead);
-  if (newProfile.elements.bouldering.checked) {
-    var newBouldering = true;
-  } else {
-    var newBouldering = false;
-  }
-  console.log(newBouldering);
-  var newSkill = newProfile.elements.grade.value;
-  console.log(newSkill);
-  console.log('before points', profilesArr);
-  // var newContact = newProfile.elements.contact.value;
-  matchGymLocation();
-  matchSkill();
-  matchSportTR();
-  matchSportLead();
-  matchBouldering();
-  // this.points = 0;
-  console.log('aftr points', profilesArr);
-  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
-  localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
-  console.log(creatingNewProfile);
-  console.log(localStorage);
-  localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
-  window.location = 'chart.html';
-};
-
-// identifies the user hit submit, then runs the newProfileFormSubmit function
-var newProfile = document.getElementById('profile-form');
-newProfile.addEventListener('submit', newProfileFormSubmit);
-
-//function to put the users form input into local storage
-function profilesArrToLocalStorage(){
-  console.log(JSON.parse(localStorage.getItem('profilesArr')));
-  if (JSON.parse(localStorage.getItem('profilesArr'))) {
-    profilesArr = JSON.parse(localStorage.getItem('profilesArr'));
-  } else {
-    generateDBProfiles();
-  }
-};
+//
+// //takes the form input and creates a new profile and pushes in to the empty profilesArr
+// function newProfileFormSubmit(event) {
+//   event.preventDefault();
+//   console.log('event test');
+//   var newName = newProfile.elements.username.value;
+//   console.log(newName);
+//   var newLocation = newProfile.elements.gymlocation.value;
+//   console.log(newLocation);
+//   if (newProfile.elements.sporttr.checked) {
+//     var newSportTR = true;
+//   } else {
+//     var newSportTR = false;
+//   }
+//   console.log(newSportTR);
+//   if (newProfile.elements.sportlead.checked) {
+//     var newSportLead = true;
+//   } else {
+//     var newSportLead = false;
+//   }
+//   console.log(newSportLead);
+//   if (newProfile.elements.bouldering.checked) {
+//     var newBouldering = true;
+//   } else {
+//     var newBouldering = false;
+//   }
+//   console.log(newBouldering);
+//   var newSkill = newProfile.elements.grade.value;
+//   console.log(newSkill);
+//   console.log('before points', profilesArr);
+//   // var newContact = newProfile.elements.contact.value;
+//   matchGymLocation();
+//   matchSkill();
+//   matchSportTR();
+//   matchSportLead();
+//   matchBouldering();
+//   // this.points = 0;
+//   console.log('aftr points', profilesArr);
+//   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+//   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
+//   console.log(creatingNewProfile);
+//   console.log(localStorage);
+//   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
+//   window.location = 'chart.html';
+// };
+//
+// // identifies the user hit submit, then runs the newProfileFormSubmit function
+// var newProfile = document.getElementById('profile-form');
+// newProfile.addEventListener('submit', newProfileFormSubmit);
 
 var currentProfileArr = [];
 console.log(currentProfileArr);
