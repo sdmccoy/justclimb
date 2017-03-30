@@ -85,16 +85,17 @@ function newProfileFormSubmit(event) {
   matchSportLead();
   matchBouldering();
   this.points = 0;
+  profilesArrToLocalStorage();
   var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
-  console.log(creatingNewProfile);
   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
+  console.log(creatingNewProfile);
   console.log(localStorage);
-  currentProfileArr.push(creatingNewProfile);
+  
   window.location = 'chart.html';
+  // drawChart();
   // console.log(this);
   profilesArr.push(this);
   // console.log(profilesArr);
-  // newProfileToLocalStorage();
 };
 
 // identifies the user hit submit, then runs the newProfileFormSubmit function
@@ -107,10 +108,6 @@ function profilesArrToLocalStorage(){
   if (JSON.parse(localStorage.getItem('profilesArr'))) {
     var accumProfileArr = JSON.parse(localStorage.getItem('profilesArr'));
     console.log(accumProfileArr);
-    // console.log(currentProfileArr);
-    var currentProfile = JSON.parse(localStorage.getItem('creatingNewProfile'));
-    accumProfileArr += currentProfile;
-    console.log(localStorage);
   } else {
     generateDBProfiles();
     console.log(localStorage);
