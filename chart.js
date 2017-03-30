@@ -7,7 +7,6 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
   //Create table data.
   var storedprofilesArr = JSON.parse(localStorage.getItem('profilesArr'));
-  console.log('made it');
   var data = google.visualization.arrayToDataTable([
     ['Climber', 'Match Percentage', 'link'],
     ['climber 1', 0, 'profile.html'],
@@ -43,7 +42,6 @@ function drawChart() {
     storedprofilesArr.sort(function(a, b) {
       return parseFloat(b.points) - parseFloat(a.points);
     });
-    console.log('yes', storedprofilesArr);
     localStorage.profilesArr = JSON.stringify(storedprofilesArr);
     // populateNewUser();
     window.location = data.getValue(chart.getSelection()[0]['row'], 2 );
