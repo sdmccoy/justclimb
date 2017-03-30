@@ -27,7 +27,7 @@ function newProfileFormSubmit(event) {
   matchSportTR();
   matchSportLead();
   matchBouldering();
-  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill);
+  var creatingNewProfile = new Profile(newName, newLocation, newSportTR, newSportLead, newBouldering, newSkill, newContact);
   localStorage.setItem('creatingNewProfile', JSON.stringify(creatingNewProfile));
   localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
   window.location = 'chart.html';
