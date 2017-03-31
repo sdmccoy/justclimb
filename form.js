@@ -37,3 +37,12 @@ function newProfileFormSubmit(event) {
 // identifies the user hit submit, then runs the newProfileFormSubmit function
 var newProfile = document.getElementById('profile-form');
 newProfile.addEventListener('submit', newProfileFormSubmit);
+
+function clearScore(event) {
+  event.preventDefault();
+  for(var i = 0; i < profilesArr.length; i++) {
+    profilesArr[i].points = 0;
+  }
+};
+
+resetPoints.addEventListener('click', clearScore);

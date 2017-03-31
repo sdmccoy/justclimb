@@ -136,7 +136,8 @@ label {
 #user-input-form {
   text-align: left;
   margin-left: 35%;
-  margin-top: 100px;
+  margin-top: 50px;
+  font-size: 1em;
 }
 
 #reset-points {
@@ -186,15 +187,24 @@ label {
   border-style: ridge;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
+.profile-pic p {
+  padding: 25px;
+  font-family: Comic Sans;
+  font-size: .9em;
+}
+.profile-pic span {
+  font-weight: bold;
+}
 #left-profile-pic {
   float: left;
   border-radius: 100%;
+  margin-right: 20px;
 }
 
 #right-profile-pic {
   float: right;
   border-radius: 100%;
+  margin-left: 20px;
 }
 
 h2 {
@@ -260,9 +270,21 @@ nav {
 }
 #profiles-title {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 0px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1em;
 }
 #about-us {
   margin-top: 50px;
+}
+#chart-description {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1em;
+}
+#intro-text {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1em;
 }
