@@ -57,13 +57,3 @@ function Profile(name, gymLocation, sportTR, sportLead, bouldering, skill, conta
   profilesArr.push(this);
 };
 localStorage.setItem('profilesArr', JSON.stringify(profilesArr));
-
-function clearScore(event) {
-  event.preventDefault();
-  for(var i = 0; i < profilesArr.length; i++) {
-    profilesArr[i].points = 0;
-    // localStorage.clear(profilesArr[i].points);
-  }
-};
-
-resetPoints.addEventListener('click', clearScore);
